@@ -1,0 +1,165 @@
+/*
+ *
+ * Copyright 2017 Abner Zheng
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+
+
+{
+    parserClass = "com.netease.regular.lang.parser.RegularParser"
+
+    extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+    psiPackage = "com.netease.regular.lang.psi"
+    psiImplPackage = "com.netease.regular.lang.psi.impl"
+    psiClassPrefix = "Regular"
+
+    elementTypeHolderClass = "com.netease.regular.lang.psi.RegularTypes"
+    elementTypeClass = "com.netease.regular.lang.psi.RegularElementType"
+    tokenTypeClass = "com.netease.regular.lang.psi.RegularTokenType"
+
+//    psiImplUtilClass = "com.netease.regular.lang.parser.RegularParserUtil"
+    tokens=[
+        LBRACE = '{'
+        RBRACE = '}'
+        LBRAKET = '['
+        RBRAKET = ']'
+        DOT = '.'
+        space = 'regexp:\s+'
+        STARTCOMMAND = '{#'
+        ENDCOMMAND = '{/'
+        IF = 'if'
+        ELSE = 'else'
+        ELSEIF = 'elseif'
+        CONTENT = 'regexp:"[^"\{]*"'
+        FILTEROP = '|'
+        LIST = 'list'
+        AS = 'as'
+        AT = '@'
+        BY = 'by'
+        THIS = 'this'
+        NULL = 'null'
+        TRUE = 'true'
+        FALSE = 'false'
+        COMMA = ','
+        COLON = ':'
+        LPARAM = '('
+        RPARAM = ')'
+        INCLUDE = 'include'
+        NUMBER = 'regexp:\d+'
+        ID = 'regexp:[a-zA-Z]\w*'
+    ]
+}
+file ::= statement*
+private statement ::= CONTENT | ifExpr | interpolationExpr | listExpr | includeExpr
+
+ifExpr ::= STARTCOMMAND IF expression RBRACE statement* elseifExpr? elseExpr? ENDCOMMAND IF RBRACE
+
+elseExpr ::= STARTCOMMAND ELSE RBRACE statement*
+
+elseifExpr ::= STARTCOMMAND ELSEIF expression RBRACE statement*
+
+interpolationExpr ::= LBRACE expression  RBRACE
+
+expression ::= bindOnceExpr | expr
+
+listExpr ::=  STARTCOMMAND LIST expression (AS ID (BY expression)?)? RBRACE statement* ENDCOMMAND LIST RBRACE
+bindOnceExpr ::= AT LPARAM expr RPARAM
+includeExpr ::= STARTCOMMAND INCLUDE ID RBRACE
+
+
+// regular
+
+private expr ::= filter
+
+
+
+filter::= assign (FILTEROP ID (COLON args)?)*
+
+
+// assign ::=   condition
+//            | left-hand-expr = condition
+
+private assign ::= condition | leftHandExpr assignOperator condition
+
+leftHandExpr ::= callExpr | member
+
+callExpr ::= member LPARAM args? RPARAM callExprSuffix*
+
+callExprSuffix ::= LPARAM args? RPARAM
+                 | indexSuffix
+                 | propertyReferenceSuffix
+args ::= assign (COMMA assign)*
+
+// conditon::= or
+//           | or ? assign : assign
+private condition ::= or
+            | or '?' assign COLON assign
+
+// or ::= and
+//      | and && or
+private or ::= and | and '&&' or
+
+// and ::= equal
+//       | equal && and
+private and ::= equal | equal '&&' and
+
+private equal ::= relation (equationOperator relation)*
+
+equationOperator ::= '==' | '===' | '!=' | '!=='
+
+private relation ::= additive (relationOperator additive)*
+
+private additive ::= multive (addorsubOperator multive)*
+private multive ::= unary (multOrDivOperator unary)*
+
+private unary ::= unaryOperator unary | member
+private member ::= primary memberSuffix*
+private memberSuffix ::= indexSuffix | propertyReferenceSuffix | LPARAM args RPARAM
+private indexSuffix ::= LBRAKET expression RBRAKET
+propertyReferenceSuffix ::= DOT ID
+
+
+assignOperator ::= '=' | '+=' | '-=' | '*=' | '/=' | '%='
+relationOperator ::= '<' | '>' | '>=' | '<='
+addorsubOperator ::= '+' | '-'
+unaryOperator ::= '+' | '-' | '~' | '!'
+multOrDivOperator::= '*' | '/'
+
+
+/*
+ * primary ::= this
+ *           | ident
+ *           | literal
+ *           | array
+ *           | object
+ *           | ( expression )
+ */
+
+private primary ::= THIS | ID
+             | literal | array
+             | object | LPARAM expression RPARAM
+
+private literal ::=   NULL | TRUE
+            | FALSE
+            | STRING
+            | NUMBER
+
+array ::= LBRAKET assign (COMMA assign)* RBRAKET
+
+object ::= LBRACE propAssign (COMMA propAssign)* '}'
+
+propAssign ::=  prop COLON assign
+
+prop ::= NUMBER | ID | STRING
