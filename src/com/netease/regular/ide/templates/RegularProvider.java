@@ -24,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 public class RegularProvider implements DefaultLiveTemplatesProvider {
     @Override
     public String[] getDefaultLiveTemplateFiles() {
-        return new String[]{"liveTemplates/jet_actions"};
+        return new String[]{"liveTemplates/regular_action"};
     }
 
     @Nullable

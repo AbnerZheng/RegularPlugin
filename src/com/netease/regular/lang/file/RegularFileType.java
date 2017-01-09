@@ -44,19 +44,19 @@ public class RegularFileType extends LanguageFileType implements TemplateLanguag
     @NotNull
     @Override
     public String getName() {
-        return "Jet";
+        return "Regular";
     }
 
     @NotNull
     @Override
     public String getDescription() {
-        return "Jet template engine file";
+        return "Regular file";
     }
 
     @NotNull
     @Override
     public String getDefaultExtension() {
-        return "jet";
+        return "rgl";
     }
 
     @Nullable

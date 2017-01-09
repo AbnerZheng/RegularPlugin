@@ -44,9 +44,9 @@ import java.util.Set;
 
 public class RegularFileViewProvider extends MultiplePsiFilesPerDocumentFileViewProvider implements TemplateLanguageFileViewProvider {
     private final Language myTemplateDataLanguage;
-    public static final IElementType JET_FRAGMENT = new IElementType("JetFragmentElementType", RegularLanguage.INSTANCE);
+    public static final IElementType Regular_FRAGMENT = new IElementType("RegularFragmentElementType", RegularLanguage.INSTANCE);
     public static final IElementType TEMPLATE_DATA =
-            new TemplateDataElementType("JetTextElementType", RegularLanguage.INSTANCE, RegularTypes.CONTENT, JET_FRAGMENT);
+            new TemplateDataElementType("RegularTextElementType", RegularLanguage.INSTANCE, RegularTypes.CONTENT, Regular_FRAGMENT);
 
     public RegularFileViewProvider(PsiManager manager, VirtualFile file, boolean physical) {
         super(manager, file, physical);

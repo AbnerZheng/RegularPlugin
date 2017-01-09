@@ -3,7 +3,7 @@ package com.regular.parsing;
 import com.intellij.lexer.Lexer;
 import com.intellij.psi.tree.IElementType;
 import com.intellij.testFramework.PlatformLiteFixture;
-import com.netease.regular.lang.lexer.RegularLexerAdapter;
+import com.netease.regular.lang.lexer.RegularLexer;
 import junit.framework.Assert;
 
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ public abstract class RegularLexerTest extends PlatformLiteFixture {
   @Override
   protected void setUp() throws Exception {
     super.setUp();
-    _lexer = new RegularLexerAdapter();
+    _lexer = new RegularLexer();
   }
 
   TokenizerResult tokenize(String string) {

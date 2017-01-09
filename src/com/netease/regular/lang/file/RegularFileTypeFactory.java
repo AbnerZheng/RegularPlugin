@@ -26,7 +26,7 @@ import org.jetbrains.annotations.NotNull;
 public class RegularFileTypeFactory extends FileTypeFactory {
     @Override
     public void createFileTypes(@NotNull FileTypeConsumer consumer) {
-        consumer.consume(RegularFileType.INSTANCE, "jet");
-        consumer.consume(RegularFileType.INSTANCE, new WildcardFileNameMatcher("*.jet.html"));
+        consumer.consume(RegularFileType.INSTANCE, "rgl");
+        consumer.consume(RegularFileType.INSTANCE, new WildcardFileNameMatcher("*.rgl.html"));
     }
 }

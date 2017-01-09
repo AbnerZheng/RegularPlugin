@@ -26,7 +26,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class RegularContext extends TemplateContextType {
     protected RegularContext() {
-        super("JET", "jet");
+        super("Regular", "Regular");
     }
 
     @Override

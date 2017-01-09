@@ -19,7 +19,7 @@
 package com.regular.parsing;
 
 import com.intellij.testFramework.ParsingTestCase;
-import com.netease.regular.lang.RegularParserDefinition;
+import com.netease.regular.RegularParserDefinition;
 
 public class RegularParsingTest extends ParsingTestCase {
     public RegularParsingTest() {
@@ -32,7 +32,7 @@ public class RegularParsingTest extends ParsingTestCase {
 
     @Override
     protected String getTestDataPath() {
-        return "GoJetPlugin/testData";
+        return "RegularPlugin/testData";
     }
 
     @Override
