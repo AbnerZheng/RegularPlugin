@@ -19,6 +19,22 @@ public class RegularJsLexerTest extends LexerTestCase {
         doFileTest("rgl");
     }
 
+    public void testList(){
+        doFileTest("rgl");
+    }
+
+    public void testIf(){
+        doFileTest("rgl");
+    }
+
+    public void testInclude(){
+        doFileTest("rgl");
+    }
+
+    public void testBugfix(){
+        doFileTest("rgl");
+    }
+
     @Override
     protected String getDirPath() {
         return RegularTestUtil.getBaseTestDataPath(RegularJsLexerTest.class).substring(PathManager.getHomePath().length());

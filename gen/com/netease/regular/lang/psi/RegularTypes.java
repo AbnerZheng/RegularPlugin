@@ -33,16 +33,20 @@ public interface RegularTypes {
   IElementType RELATION_OPERATOR = new RegularElementType("RELATION_OPERATOR");
   IElementType UNARY_OPERATOR = new RegularElementType("UNARY_OPERATOR");
 
+  IElementType ADDASSIGN = new RegularTokenType("+=");
   IElementType AS = new RegularTokenType("as");
+  IElementType ASSIGNOP = new RegularTokenType("=");
   IElementType AT = new RegularTokenType("@");
   IElementType BY = new RegularTokenType("by");
   IElementType COLON = new RegularTokenType(":");
   IElementType COMMA = new RegularTokenType(",");
   IElementType CONTENT = new RegularTokenType("CONTENT");
+  IElementType DIVASSIGN = new RegularTokenType("/=");
   IElementType DOT = new RegularTokenType(".");
   IElementType ELSE = new RegularTokenType("else");
   IElementType ELSEIF = new RegularTokenType("elseif");
   IElementType ENDCOMMAND = new RegularTokenType("{/");
+  IElementType EQUALEQUAL = new RegularTokenType("==");
   IElementType FALSE = new RegularTokenType("false");
   IElementType FILTEROP = new RegularTokenType("|");
   IElementType ID = new RegularTokenType("ID");
@@ -52,13 +56,17 @@ public interface RegularTypes {
   IElementType LBRAKET = new RegularTokenType("[");
   IElementType LIST = new RegularTokenType("list");
   IElementType LPARAM = new RegularTokenType("(");
+  IElementType MODASSIGN = new RegularTokenType("%=");
+  IElementType MULASSIGN = new RegularTokenType("*=");
   IElementType NULL = new RegularTokenType("null");
   IElementType NUMBER = new RegularTokenType("NUMBER");
   IElementType RBRACE = new RegularTokenType("}");
   IElementType RBRAKET = new RegularTokenType("]");
   IElementType RPARAM = new RegularTokenType(")");
   IElementType STARTCOMMAND = new RegularTokenType("{#");
+  IElementType STRICTEQUAL = new RegularTokenType("===");
   IElementType STRING = new RegularTokenType("STRING");
+  IElementType SUBASSIGN = new RegularTokenType("-=");
   IElementType THIS = new RegularTokenType("this");
   IElementType TRUE = new RegularTokenType("true");
 

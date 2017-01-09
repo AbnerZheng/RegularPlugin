@@ -1,0 +1,11 @@
+<div></div>
+<svg viewBox="0 0 100 100">
+    <line y1="100" y2="100" stroke="#fff"/>
+    {#if test==1}
+    <line y1="10" y2="90" stroke="#0f0"/>
+    {#elseif test==2}
+    <line y1="20" y2="90" stroke="#f00"/>
+    {#else}
+    <line y1="30" y2="90" stroke="#f00"/>
+    {/if}
+</svg>

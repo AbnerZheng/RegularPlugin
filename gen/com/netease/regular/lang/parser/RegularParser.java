@@ -279,12 +279,12 @@ public class RegularParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(b, l, "assignOperator")) return false;
     boolean r;
     Marker m = enter_section_(b, l, _NONE_, ASSIGN_OPERATOR, "<assign operator>");
-    r = consumeToken(b, "=");
-    if (!r) r = consumeToken(b, "+=");
-    if (!r) r = consumeToken(b, "-=");
-    if (!r) r = consumeToken(b, "*=");
-    if (!r) r = consumeToken(b, "/=");
-    if (!r) r = consumeToken(b, "%=");
+    r = consumeToken(b, ASSIGNOP);
+    if (!r) r = consumeToken(b, ADDASSIGN);
+    if (!r) r = consumeToken(b, SUBASSIGN);
+    if (!r) r = consumeToken(b, MULASSIGN);
+    if (!r) r = consumeToken(b, DIVASSIGN);
+    if (!r) r = consumeToken(b, MODASSIGN);
     exit_section_(b, l, m, r, false, null);
     return r;
   }
@@ -491,8 +491,8 @@ public class RegularParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(b, l, "equationOperator")) return false;
     boolean r;
     Marker m = enter_section_(b, l, _NONE_, EQUATION_OPERATOR, "<equation operator>");
-    r = consumeToken(b, "==");
-    if (!r) r = consumeToken(b, "===");
+    r = consumeToken(b, EQUALEQUAL);
+    if (!r) r = consumeToken(b, STRICTEQUAL);
     if (!r) r = consumeToken(b, "!=");
     if (!r) r = consumeToken(b, "!==");
     exit_section_(b, l, m, r, false, null);

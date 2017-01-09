@@ -1,0 +1,7 @@
+{#list haha}
+{haha}
+{/list}
+
+{#list items as item}
+<div>hello</div>
+{/list}

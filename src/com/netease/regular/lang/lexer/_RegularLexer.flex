@@ -58,6 +58,15 @@ ID=[a-zA-Z][a-zA-Z_0-9]*
   "null"             { return NULL; }
   "true"             { return TRUE; }
   "false"            { return FALSE; }
+  "==="              { return STRICTEQUAL;}
+  "=="               { return EQUALEQUAL;}
+
+  "="                { return ASSIGNOP; }
+  "+="               { return ADDASSIGN; }
+  "-="               { return SUBASSIGN; }
+  "*="               { return MULASSIGN; }
+  "/="               { return DIVASSIGN; }
+  "%="               { return MODASSIGN; }
   ","                { return COMMA; }
   ":"                { return COLON; }
   "("                { return LPARAM; }

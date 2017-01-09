@@ -1,0 +1,5 @@
+CONTENT ('<ul><div>hello name</div></ul>\n<div attr='hello'></div>\n<div attr=')
+{ ('{')
+ID ('hello')
+} ('}')
+CONTENT ('></div>')
