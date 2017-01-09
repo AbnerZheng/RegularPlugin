@@ -1,4 +1,4 @@
-package com.regular.parsing;
+package com.regular.lang.parsing;
 
 import com.intellij.lexer.Lexer;
 import com.intellij.psi.tree.IElementType;

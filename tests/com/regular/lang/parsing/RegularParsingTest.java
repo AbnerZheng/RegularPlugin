@@ -16,7 +16,7 @@
  *
  */
 
-package com.regular.parsing;
+package com.regular.lang.parsing;
 
 import com.intellij.testFramework.ParsingTestCase;
 import com.netease.regular.RegularParserDefinition;
