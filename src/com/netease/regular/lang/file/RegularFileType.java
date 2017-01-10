@@ -28,6 +28,7 @@ import com.intellij.openapi.vfs.CharsetToolkit;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.templateLanguages.TemplateDataLanguageMappings;
 import com.netease.regular.RegularLanguage;
+import com.netease.regular.icons.RegularIcons;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -62,7 +63,7 @@ public class RegularFileType extends LanguageFileType implements TemplateLanguag
     @Nullable
     @Override
     public Icon getIcon() {
-        return AllIcons.Icons.Ide.NextStep;
+        return RegularIcons.FILE;
     }
 
     @Override
