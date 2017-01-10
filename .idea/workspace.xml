@@ -2,67 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2736dc40-c653-4da5-bf96-acaf6558faed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/netease/regular/ide/folding/RegularFoldingBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/directive.rgl" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/parser/RegularParser.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularAddorsubOperator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularArgs.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularArray.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularAssignOperator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularBindOnceExpr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularCallExpr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularCallExprSuffix.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularElseExpr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularElseifExpr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularEquationOperator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularExpression.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularFilter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularIfExpr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularIncludeExpr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularInterpolationExpr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularLeftHandExpr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularListExpr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularMultOrDivOperator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularObject.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularProp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularPropAssign.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularPropertyReferenceSuffix.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularRelationOperator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularTypes.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularUnaryOperator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularVisitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularAddorsubOperatorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularArgsImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularArrayImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularAssignOperatorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularBindOnceExprImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularCallExprImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularCallExprSuffixImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularElseExprImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularElseifExprImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularEquationOperatorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularExpressionImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularFilterImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularIfExprImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularIncludeExprImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularInterpolationExprImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularLeftHandExprImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularListExprImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularMultOrDivOperatorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularObjectImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularPropAssignImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularPropImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularPropertyReferenceSuffixImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularRelationOperatorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularUnaryOperatorImpl.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/RegularPlugin.iml" afterPath="$PROJECT_DIR$/.idea/RegularPlugin.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/lexer/_RegularLexer.java" afterPath="$PROJECT_DIR$/gen/com/netease/regular/lang/lexer/_RegularLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/netease/regular/lang/lexer/_RegularLexer.flex" afterPath="$PROJECT_DIR$/src/com/netease/regular/lang/lexer/_RegularLexer.flex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/netease/regular/lang/parser/parser.bnf" afterPath="$PROJECT_DIR$/src/com/netease/regular/lang/parser/parser.bnf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/regular/lang/lexer/RegularJsLexerTest.java" afterPath="$PROJECT_DIR$/tests/com/regular/lang/lexer/RegularJsLexerTest.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,113 +17,105 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="RegularSyntaxHighlighter.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/netease/regular/ide/highlighting/RegularSyntaxHighlighter.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-76">
-                  <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="LexerEditorHighlighter.java" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/idea/idea2/platform/editor-ui-ex/src/com/intellij/openapi/editor/ex/util/LexerEditorHighlighter.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="67">
-                  <caret line="374" column="53" lean-forward="false" selection-start-line="374" selection-start-column="53" selection-end-line="374" selection-end-column="53" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RegularFoldingBuilder.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/netease/regular/ide/folding/RegularFoldingBuilder.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="69" column="4" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#2213#2214#0" expanded="true" />
-                    <element signature="e#2241#2242#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ApplicationImpl.class" pinned="false" current-in-tab="false">
-            <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/openapi/application/impl/ApplicationImpl.class">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-889">
-                  <caret line="149" column="119" lean-forward="false" selection-start-line="149" selection-start-column="119" selection-end-line="149" selection-end-column="119" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/out/META-INF/plugin.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="48" column="38" lean-forward="false" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_RegularLexer.flex" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/netease/regular/lang/lexer/_RegularLexer.flex">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="42" column="52" lean-forward="false" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="52" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="parser.bnf" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/netease/regular/lang/parser/parser.bnf">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="88" column="20" lean-forward="false" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
-                  <folding>
-                    <element signature="e#599#2031#0" expanded="true" />
-                    <element signature="e#1168#2029#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="735">
-                  <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="parser.bnf.preview" pinned="false" current-in-tab="true">
-            <entry file="mock:///parser.bnf.preview">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="RegularSyntaxHighlighter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/netease/regular/ide/highlighting/RegularSyntaxHighlighter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-76">
+              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LexerEditorHighlighter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/idea/idea2/platform/editor-ui-ex/src/com/intellij/openapi/editor/ex/util/LexerEditorHighlighter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="67">
+              <caret line="374" column="53" lean-forward="false" selection-start-line="374" selection-start-column="53" selection-end-line="374" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegularFoldingBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/netease/regular/ide/folding/RegularFoldingBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="52" column="19" lean-forward="false" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2245#2246#0" expanded="true" />
+                <element signature="e#2273#2274#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationImpl.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/openapi/application/impl/ApplicationImpl.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-889">
+              <caret line="149" column="119" lean-forward="false" selection-start-line="149" selection-start-column="119" selection-end-line="149" selection-end-column="119" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out/META-INF/plugin.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="48" column="38" lean-forward="false" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_RegularLexer.flex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/netease/regular/lang/lexer/_RegularLexer.flex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="42" column="52" lean-forward="false" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parser.bnf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/netease/regular/lang/parser/parser.bnf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="88" column="20" lean-forward="false" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
+              <folding>
+                <element signature="e#599#2031#0" expanded="true" />
+                <element signature="e#1168#2029#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="735">
+              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -253,6 +186,7 @@
         <option value="/parser.bnf.preview" />
         <option value="$PROJECT_DIR$/src/com/netease/regular/lang/parser/parser.bnf" />
         <option value="$PROJECT_DIR$/src/com/netease/regular/ide/folding/RegularFoldingBuilder.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -1060,7 +994,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1483950576941</updated>
-      <workItem from="1483950582953" duration="20150000" />
+      <workItem from="1483950582953" duration="20416000" />
     </task>
     <servers />
   </component>
@@ -1097,7 +1031,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20150000" />
+    <option name="totallyTimeSpent" value="20416000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1116,16 +1050,16 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35890412" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35890412" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="PsiViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37318256" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16639742" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1223,14 +1157,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1650,13 +1576,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/netease/regular/ide/folding/RegularFoldingBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="69" column="4" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
+        <state relative-caret-position="555">
+          <caret line="52" column="19" lean-forward="false" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2213#2214#0" expanded="true" />
-            <element signature="e#2241#2242#0" expanded="true" />
+            <element signature="e#2245#2246#0" expanded="true" />
+            <element signature="e#2273#2274#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
