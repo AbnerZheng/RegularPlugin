@@ -15,8 +15,6 @@ public interface RegularTypes {
   IElementType BIND_ONCE_EXPR = new RegularElementType("BIND_ONCE_EXPR");
   IElementType CALL_EXPR = new RegularElementType("CALL_EXPR");
   IElementType CALL_EXPR_SUFFIX = new RegularElementType("CALL_EXPR_SUFFIX");
-  IElementType ELSEIF_EXPR = new RegularElementType("ELSEIF_EXPR");
-  IElementType ELSE_EXPR = new RegularElementType("ELSE_EXPR");
   IElementType EQUATION_OPERATOR = new RegularElementType("EQUATION_OPERATOR");
   IElementType EXPRESSION = new RegularElementType("EXPRESSION");
   IElementType FILTER = new RegularElementType("FILTER");
@@ -32,6 +30,7 @@ public interface RegularTypes {
   IElementType PROP_ASSIGN = new RegularElementType("PROP_ASSIGN");
   IElementType RELATION_OPERATOR = new RegularElementType("RELATION_OPERATOR");
   IElementType UNARY_OPERATOR = new RegularElementType("UNARY_OPERATOR");
+  IElementType WRAPPER_BLOCK = new RegularElementType("WRAPPER_BLOCK");
 
   IElementType ADDASSIGN = new RegularTokenType("+=");
   IElementType AS = new RegularTokenType("as");
@@ -94,12 +93,6 @@ public interface RegularTypes {
       else if (type == CALL_EXPR_SUFFIX) {
         return new RegularCallExprSuffixImpl(node);
       }
-      else if (type == ELSEIF_EXPR) {
-        return new RegularElseifExprImpl(node);
-      }
-      else if (type == ELSE_EXPR) {
-        return new RegularElseExprImpl(node);
-      }
       else if (type == EQUATION_OPERATOR) {
         return new RegularEquationOperatorImpl(node);
       }
@@ -144,6 +137,9 @@ public interface RegularTypes {
       }
       else if (type == UNARY_OPERATOR) {
         return new RegularUnaryOperatorImpl(node);
+      }
+      else if (type == WRAPPER_BLOCK) {
+        return new RegularWrapperBlockImpl(node);
       }
       throw new AssertionError("Unknown element type: " + type);
     }

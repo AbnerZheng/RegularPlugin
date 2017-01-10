@@ -10,17 +10,8 @@ public interface RegularListExpr extends PsiElement {
   @NotNull
   List<RegularExpression> getExpressionList();
 
-  @NotNull
-  List<RegularIfExpr> getIfExprList();
-
-  @NotNull
-  List<RegularIncludeExpr> getIncludeExprList();
-
-  @NotNull
-  List<RegularInterpolationExpr> getInterpolationExprList();
-
-  @NotNull
-  List<RegularListExpr> getListExprList();
+  @Nullable
+  RegularWrapperBlock getWrapperBlock();
 
   @Nullable
   PsiElement getId();

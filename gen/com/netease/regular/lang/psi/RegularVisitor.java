@@ -35,14 +35,6 @@ public class RegularVisitor extends PsiElementVisitor {
     visitPsiElement(o);
   }
 
-  public void visitElseExpr(@NotNull RegularElseExpr o) {
-    visitPsiElement(o);
-  }
-
-  public void visitElseifExpr(@NotNull RegularElseifExpr o) {
-    visitPsiElement(o);
-  }
-
   public void visitEquationOperator(@NotNull RegularEquationOperator o) {
     visitPsiElement(o);
   }
@@ -100,6 +92,10 @@ public class RegularVisitor extends PsiElementVisitor {
   }
 
   public void visitUnaryOperator(@NotNull RegularUnaryOperator o) {
+    visitPsiElement(o);
+  }
+
+  public void visitWrapperBlock(@NotNull RegularWrapperBlock o) {
     visitPsiElement(o);
   }
 

@@ -7,25 +7,10 @@ import com.intellij.psi.PsiElement;
 
 public interface RegularIfExpr extends PsiElement {
 
-  @Nullable
-  RegularElseExpr getElseExpr();
-
-  @Nullable
-  RegularElseifExpr getElseifExpr();
+  @NotNull
+  List<RegularExpression> getExpressionList();
 
   @NotNull
-  RegularExpression getExpression();
-
-  @NotNull
-  List<RegularIfExpr> getIfExprList();
-
-  @NotNull
-  List<RegularIncludeExpr> getIncludeExprList();
-
-  @NotNull
-  List<RegularInterpolationExpr> getInterpolationExprList();
-
-  @NotNull
-  List<RegularListExpr> getListExprList();
+  List<RegularWrapperBlock> getWrapperBlockList();
 
 }

@@ -27,6 +27,9 @@ public class RegularJsLexerTest extends LexerTestCase {
         doFileTest("rgl");
     }
 
+    public void testDirective(){
+        doFileTest("rgl");
+    }
     public void testInclude(){
         doFileTest("rgl");
     }

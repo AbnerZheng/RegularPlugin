@@ -70,19 +70,21 @@
     ]
 }
 file ::= statement*
-private statement ::= CONTENT | ifExpr | interpolationExpr | listExpr | includeExpr
+private statement ::= CONTENT | ifExpr | listExpr | interpolationExpr | includeExpr
 
-ifExpr ::= STARTCOMMAND IF expression RBRACE statement* elseifExpr? elseExpr? ENDCOMMAND IF RBRACE
+ifExpr ::= STARTCOMMAND IF expression RBRACE wrapperBlock? elseifExpr? elseExpr? ENDCOMMAND IF RBRACE
 
-elseExpr ::= STARTCOMMAND ELSE RBRACE statement*
+wrapperBlock ::= statement+
 
-elseifExpr ::= STARTCOMMAND ELSEIF expression RBRACE statement*
+private elseExpr ::= STARTCOMMAND ELSE RBRACE wrapperBlock?
+
+private elseifExpr ::= STARTCOMMAND ELSEIF expression RBRACE wrapperBlock?
 
 interpolationExpr ::= LBRACE expression  RBRACE
 
 expression ::= bindOnceExpr | expr
 
-listExpr ::=  STARTCOMMAND LIST expression (AS ID (BY expression)?)? RBRACE statement* ENDCOMMAND LIST RBRACE
+listExpr ::=  STARTCOMMAND LIST expression (AS ID (BY expression)?)? RBRACE wrapperBlock? ENDCOMMAND LIST RBRACE
 bindOnceExpr ::= AT LPARAM expr RPARAM
 includeExpr ::= STARTCOMMAND INCLUDE ID RBRACE
 

@@ -11,14 +11,14 @@ import static com.netease.regular.lang.psi.RegularTypes.*;
 import com.intellij.extapi.psi.ASTWrapperPsiElement;
 import com.netease.regular.lang.psi.*;
 
-public class RegularElseExprImpl extends ASTWrapperPsiElement implements RegularElseExpr {
+public class RegularWrapperBlockImpl extends ASTWrapperPsiElement implements RegularWrapperBlock {
 
-  public RegularElseExprImpl(ASTNode node) {
+  public RegularWrapperBlockImpl(ASTNode node) {
     super(node);
   }
 
   public void accept(@NotNull RegularVisitor visitor) {
-    visitor.visitElseExpr(this);
+    visitor.visitWrapperBlock(this);
   }
 
   public void accept(@NotNull PsiElementVisitor visitor) {

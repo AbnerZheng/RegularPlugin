@@ -29,7 +29,7 @@ WHITE_SPACE=\s+
 SPACE=[ \t\n\x0B\f\r]+
 CONTENT=\"[^\"\{]*\"
 NUMBER=[0-9]+
-ID=[a-zA-Z][a-zA-Z_0-9]*
+ID=[_$a-zA-Z][_$a-zA-Z_0-9]*
 
 %%
 <YYINITIAL> {

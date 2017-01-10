@@ -27,45 +27,15 @@ public class RegularIfExprImpl extends ASTWrapperPsiElement implements RegularIf
   }
 
   @Override
-  @Nullable
-  public RegularElseExpr getElseExpr() {
-    return findChildByClass(RegularElseExpr.class);
-  }
-
-  @Override
-  @Nullable
-  public RegularElseifExpr getElseifExpr() {
-    return findChildByClass(RegularElseifExpr.class);
+  @NotNull
+  public List<RegularExpression> getExpressionList() {
+    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularExpression.class);
   }
 
   @Override
   @NotNull
-  public RegularExpression getExpression() {
-    return findNotNullChildByClass(RegularExpression.class);
-  }
-
-  @Override
-  @NotNull
-  public List<RegularIfExpr> getIfExprList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularIfExpr.class);
-  }
-
-  @Override
-  @NotNull
-  public List<RegularIncludeExpr> getIncludeExprList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularIncludeExpr.class);
-  }
-
-  @Override
-  @NotNull
-  public List<RegularInterpolationExpr> getInterpolationExprList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularInterpolationExpr.class);
-  }
-
-  @Override
-  @NotNull
-  public List<RegularListExpr> getListExprList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularListExpr.class);
+  public List<RegularWrapperBlock> getWrapperBlockList() {
+    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularWrapperBlock.class);
   }
 
 }

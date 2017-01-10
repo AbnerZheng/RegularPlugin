@@ -5,10 +5,7 @@ import java.util.List;
 import org.jetbrains.annotations.*;
 import com.intellij.psi.PsiElement;
 
-public interface RegularElseifExpr extends PsiElement {
-
-  @NotNull
-  RegularExpression getExpression();
+public interface RegularWrapperBlock extends PsiElement {
 
   @NotNull
   List<RegularIfExpr> getIfExprList();

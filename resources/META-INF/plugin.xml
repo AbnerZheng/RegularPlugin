@@ -44,8 +44,9 @@ Thanks for GoJet plugin, it help this project a lot.
                                   implementationClass="com.netease.regular.lang.file.RegularFileViewProviderFactory"/>
     <lang.parserDefinition language="RegularTemplateLanguage"
                            implementationClass="com.netease.regular.RegularParserDefinition"/>
-    <editorHighlighterProvider filetype="regular"
+    <editorHighlighterProvider filetype="Regular"
                                implementationClass="com.netease.regular.ide.highlighting.RegularEditorHighlighterFactory"/>
+      <lang.foldingBuilder language="RegularTemplateLanguage" implementationClass="com.netease.regular.ide.folding.RegularFoldingBuilder"/>
     <lang.syntaxHighlighterFactory language="RegularTemplateLanguage"
                                    implementationClass="com.netease.regular.ide.highlighting.RegularSyntaxHighlighterFactory"/>
     <fileTypeFactory implementation="com.netease.regular.lang.file.RegularFileTypeFactory"/>
