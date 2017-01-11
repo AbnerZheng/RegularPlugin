@@ -48,6 +48,7 @@ public class RegularLayeredSyntaxHighlighter extends LayeredLexerEditorHighlight
         }
 
         SyntaxHighlighter outerHighlighter = SyntaxHighlighterFactory.getSyntaxHighlighter(type, project, virtualFile);
+        // 这里把CONTENT注册为使用外部语法高亮器来执行高亮
         registerLayer(RegularTypes.CONTENT, new LayerDescriptor(outerHighlighter, ""));
     }
 }
