@@ -22,19 +22,25 @@ import com.intellij.psi.TokenType;
 import com.intellij.psi.tree.TokenSet;
 
 import static com.intellij.psi.CustomHighlighterTokenType.STRING;
-import static com.netease.regular.lang.psi.RegularTypes.ELSE;
-import static com.netease.regular.lang.psi.RegularTypes.IF;
-import static com.netease.regular.lang.psi.RegularTypes.INCLUDE;
+import static com.netease.regular.lang.psi.RegularTypes.*;
 import static javax.xml.stream.XMLStreamConstants.COMMENT;
 
 
 public interface RegularTokens {
     TokenSet tsSTRINGS = TokenSet.create(STRING);
-//    TokenSet tsCOMMENTS = TokenSet.create(COMMENT);
+    //    TokenSet tsCOMMENTS = TokenSet.create(COMMENT);
     TokenSet tsWHITESPACE = TokenSet.create(TokenType.WHITE_SPACE);
-    TokenSet tsKEYWORDS = TokenSet.create(
+    TokenSet tsRULES = TokenSet.create(
             IF,
             ELSE,
+            ELSEIF,
+            LIST,
             INCLUDE
+    );
+    TokenSet tsBRACES = TokenSet.create(
+            RBRACE,
+            LBRACE,
+            STARTCOMMAND,
+            ENDCOMMAND
     );
 }

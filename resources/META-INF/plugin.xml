@@ -60,6 +60,7 @@ Thanks for GoJet plugin, it help this project a lot.
 
     <lang.braceMatcher language="RegularTemplateLanguage" implementationClass="com.netease.regular.ide.RegularBraceMatcher"/>
     <lang.commenter language="RegularTemplateLanguage" implementationClass="com.netease.regular.ide.RegularCommenter"/>
+    <colorSettingsPage implementation="com.netease.regular.ide.highlighting.RegularColorSettingsPage"/>
   </extensions>
 
   <actions>

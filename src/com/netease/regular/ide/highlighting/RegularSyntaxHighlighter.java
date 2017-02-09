@@ -30,19 +30,19 @@ import org.jetbrains.annotations.NotNull;
 
 public class RegularSyntaxHighlighter extends SyntaxHighlighterBase {
 
-    public static final TextAttributesKey OPENCLOSETAG = TextAttributesKey.createTextAttributesKey("OPEN_CLOSE_TEMPLATE",
-            DefaultLanguageHighlighterColors.METADATA);
+    public static final TextAttributesKey BRACES = TextAttributesKey.createTextAttributesKey("OPEN_CLOSE_TEMPLATE",
+            DefaultLanguageHighlighterColors.BRACES);
 
-    public static final TextAttributesKey[] OPENCLOSETAG_KEYS = new TextAttributesKey[]{OPENCLOSETAG};
+    public static final TextAttributesKey[] BRACES_KEYS = new TextAttributesKey[]{BRACES};
 
     public static final TextAttributesKey STRING = TextAttributesKey.createTextAttributesKey("STRING",
             DefaultLanguageHighlighterColors.STRING);
     public static final TextAttributesKey[] STRING_KEYS = new TextAttributesKey[]{STRING};
 
 
-    public static final TextAttributesKey KEYWORDS = TextAttributesKey.createTextAttributesKey("KEYWORDS",
+    public static final TextAttributesKey RULES = TextAttributesKey.createTextAttributesKey("RULES",
             DefaultLanguageHighlighterColors.KEYWORD);
-    public static final TextAttributesKey[] KEYWORDS_KEYS = new TextAttributesKey[]{KEYWORDS};
+    public static final TextAttributesKey[] RULES_KEYS = new TextAttributesKey[]{RULES};
 
 
     public static final TextAttributesKey IDENT = TextAttributesKey.createTextAttributesKey("IDENT",
@@ -53,6 +53,8 @@ public class RegularSyntaxHighlighter extends SyntaxHighlighterBase {
             DefaultLanguageHighlighterColors.BLOCK_COMMENT);
     public static final TextAttributesKey[] COMMENTS_KEYS = new TextAttributesKey[]{COMMENTS};
 
+    public static final TextAttributesKey BEGINRULE = TextAttributesKey.createTextAttributesKey("BEGIN RULE", DefaultLanguageHighlighterColors.FUNCTION_DECLARATION);
+    public static final TextAttributesKey[] BEGINRULE_KEYS = new TextAttributesKey[]{BEGINRULE};
 
     private static final TextAttributesKey[] EMPTY = new TextAttributesKey[0];
 
@@ -65,14 +67,14 @@ public class RegularSyntaxHighlighter extends SyntaxHighlighterBase {
     @NotNull
     @Override
     public TextAttributesKey[] getTokenHighlights(IElementType type) {
-        if (type == RegularTypes.RBRACE || type == RegularTypes.LBRACE) {
-            return OPENCLOSETAG_KEYS;
+        if(RegularTokens.tsBRACES.contains(type)){
+            return BRACES_KEYS;
         }
         if (RegularTokens.tsSTRINGS.contains(type)) {
             return STRING_KEYS;
         }
-        if (RegularTokens.tsKEYWORDS.contains(type)) {
-            return KEYWORDS_KEYS;
+        if (RegularTokens.tsRULES.contains(type)) {
+            return RULES_KEYS;
         }
 
         if (type == RegularTypes.ID) {
