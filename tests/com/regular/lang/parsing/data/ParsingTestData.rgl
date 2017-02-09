@@ -1,0 +1,13 @@
+{#if this.index == 1}
+<li on-click="test" style="align-content: inherit" {this.delegate(event,item.action)}>
+    {item.name}
+</li>
+{#elseif false}
+<test></test>
+{#else}
+test
+{/if}
+
+{#list @(items) as item}
+{test + 'test'}
+{/list}

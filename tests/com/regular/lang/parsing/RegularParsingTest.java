@@ -18,8 +18,10 @@
 
 package com.regular.lang.parsing;
 
+import com.intellij.openapi.application.PathManager;
 import com.intellij.testFramework.ParsingTestCase;
 import com.netease.regular.RegularParserDefinition;
+import com.regular.RegularTestUtil;
 
 public class RegularParsingTest extends ParsingTestCase {
     public RegularParsingTest() {
@@ -32,7 +34,8 @@ public class RegularParsingTest extends ParsingTestCase {
 
     @Override
     protected String getTestDataPath() {
-        return "RegularPlugin/testData";
+        return RegularTestUtil.getBaseTestDataPath(RegularParsingTest.class);
+//        return "RegularPlugin/testData";
     }
 
     @Override

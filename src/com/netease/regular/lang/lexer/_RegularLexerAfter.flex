@@ -2,6 +2,7 @@ package com.netease.regular.lang.lexer;
 
 import com.intellij.lexer.FlexLexer;
 import com.intellij.psi.tree.IElementType;
+import org.intellij.grammar.psi.BnfTypes;
 
 import static com.intellij.psi.TokenType.BAD_CHARACTER;
 import static com.intellij.psi.TokenType.WHITE_SPACE;
@@ -23,7 +24,7 @@ import static com.netease.regular.lang.psi.RegularTypes.*;
 %function advance
 %type IElementType
 %unicode
-%state YYCONTENT, YYSTRING, YYSTRING_SINGLE
+%state YYCONTENT, YYSTRING
 
 EOL=\R
 WHITE_SPACE=\s+
@@ -62,11 +63,8 @@ ID=[_$a-zA-Z][_$a-zA-Z_0-9]*
   "false"            { return FALSE; }
   "==="              { return STRICTEQUAL; }
   "=="               { return EQUALEQUAL; }
-  \"([^\"\\]|\\.)*\" { return STRING; }
-  '([^'\\]|\\.)*' { return STRING; }
-//  \"                 { string.setLength(0); yybegin(YYSTRING);}
-//      "'"                 { string.setLength(0); yybegin(YYSTRING_SINGLE);}
-      "="                { return ASSIGNOP; }
+  \"                 { string.setLength(0); yybegin(YYSTRING);}
+  "="                { return ASSIGNOP; }
   "+="               { return ADDASSIGN; }
   "-="               { return SUBASSIGN; }
   "*="               { return MULASSIGN; }
@@ -86,28 +84,16 @@ ID=[_$a-zA-Z][_$a-zA-Z_0-9]*
 
 }
 
-//<YYSTRING> {
-//    \"               { yybegin(YYCONTENT); return STRING; }
-//    [^\n\r\"\\]+                   { string.append( yytext() ); }
-//          \\t                            { string.append('\t'); }
-//          \\n                            { string.append('\n'); }
-//
-//          \\r                            { string.append('\r'); }
-//          \\\"                           { string.append('\"'); }
-//          \\                             { string.append('\\'); }
-//
-//}
-//
-//<YYSTRING_SINGLE> {
-//    "'"               { yybegin(YYCONTENT); return STRING; }
-//    [^\n\r\"\\]+                   { string.append( yytext() ); }
-//          \\t                            { string.append('\t'); }
-//          \\n                            { string.append('\n'); }
-//
-//          \\r                            { string.append('\r'); }
-//          \\\"                           { string.append('\"'); }
-//          \\                             { string.append('\\'); }
-//
-//}
+<YYSTRING> {
+    \"               { yybegin(YYCONTENT); return STRING; }
+    [^\n\r\"\\]+                   { string.append( yytext() ); }
+          \\t                            { string.append('\t'); }
+          \\n                            { string.append('\n'); }
+
+          \\r                            { string.append('\r'); }
+          \\\"                           { string.append('\"'); }
+          \\                             { string.append('\\'); }
+
+}
 
 [^] { return BAD_CHARACTER; }

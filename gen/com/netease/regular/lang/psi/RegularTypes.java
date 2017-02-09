@@ -32,6 +32,7 @@ public interface RegularTypes {
   IElementType UNARY_OPERATOR = new RegularElementType("UNARY_OPERATOR");
   IElementType WRAPPER_BLOCK = new RegularElementType("WRAPPER_BLOCK");
 
+  IElementType ADD = new RegularTokenType("+");
   IElementType ADDASSIGN = new RegularTokenType("+=");
   IElementType AS = new RegularTokenType("as");
   IElementType ASSIGNOP = new RegularTokenType("=");
@@ -65,6 +66,7 @@ public interface RegularTypes {
   IElementType STARTCOMMAND = new RegularTokenType("{#");
   IElementType STRICTEQUAL = new RegularTokenType("===");
   IElementType STRING = new RegularTokenType("STRING");
+  IElementType SUB = new RegularTokenType("-");
   IElementType SUBASSIGN = new RegularTokenType("-=");
   IElementType THIS = new RegularTokenType("this");
   IElementType TRUE = new RegularTokenType("true");

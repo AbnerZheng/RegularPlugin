@@ -19,6 +19,7 @@
 
 {
     parserClass = "com.netease.regular.lang.parser.RegularParser"
+  parserUtilClass="com.netease.regular.lang.parser.RegularParserUtil2"
 
     extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
     psiPackage = "com.netease.regular.lang.psi"
@@ -60,6 +61,8 @@
         MULASSIGN = '*='
         DIVASSIGN = '/='
         MODASSIGN = '%='
+        ADD = '+'
+        SUB = '-'
         COMMA = ','
         COLON = ':'
         LPARAM = '('

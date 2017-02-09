@@ -141,10 +141,11 @@ public class RegularParser implements PsiParser, LightPsiParser {
   // '+' | '-'
   public static boolean addorsubOperator(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "addorsubOperator")) return false;
+    if (!nextTokenIs(b, "<addorsub operator>", ADD, SUB)) return false;
     boolean r;
     Marker m = enter_section_(b, l, _NONE_, ADDORSUB_OPERATOR, "<addorsub operator>");
-    r = consumeToken(b, "+");
-    if (!r) r = consumeToken(b, "-");
+    r = consumeToken(b, ADD);
+    if (!r) r = consumeToken(b, SUB);
     exit_section_(b, l, m, r, false, null);
     return r;
   }
@@ -1058,8 +1059,8 @@ public class RegularParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(b, l, "unaryOperator")) return false;
     boolean r;
     Marker m = enter_section_(b, l, _NONE_, UNARY_OPERATOR, "<unary operator>");
-    r = consumeToken(b, "+");
-    if (!r) r = consumeToken(b, "-");
+    r = consumeToken(b, ADD);
+    if (!r) r = consumeToken(b, SUB);
     if (!r) r = consumeToken(b, "~");
     if (!r) r = consumeToken(b, "!");
     exit_section_(b, l, m, r, false, null);
