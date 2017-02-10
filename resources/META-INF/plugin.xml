@@ -1,7 +1,7 @@
 <idea-plugin version="2" url="https://github.com/AbnerZheng/RegularPlugin">
   <id>com.netease.regular</id>
   <name>Regularjs Support</name>
-  <version>0.3</version>
+  <version>0.3.1</version>
   <vendor url="https://github.com/abnerzheng">Abner Zheng</vendor>
   <category>Custom Languages</category>
 
