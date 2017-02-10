@@ -31,4 +31,7 @@ public interface RegularCallExpr extends PsiElement {
   @Nullable
   PsiElement getNumber();
 
+  @Nullable
+  PsiElement getString();
+
 }

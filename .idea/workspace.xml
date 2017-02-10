@@ -2,17 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2736dc40-c653-4da5-bf96-acaf6558faed" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/parsingTestData.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/parsingTestData.txt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/testData/parsingTestData.html" afterPath="$PROJECT_DIR$/tests/com/regular/lang/parsing/data/ParsingTestData.rgl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/testData/parsingTestData.txt" afterPath="$PROJECT_DIR$/tests/com/regular/lang/parsing/data/ParsingTestData.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/comment.rgl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/lexer/_RegularLexer.java" afterPath="$PROJECT_DIR$/gen/com/netease/regular/lang/lexer/_RegularLexer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/parser/RegularParser.java" afterPath="$PROJECT_DIR$/gen/com/netease/regular/lang/parser/RegularParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularCallExpr.java" afterPath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularCallExpr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularLeftHandExpr.java" afterPath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularLeftHandExpr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularProp.java" afterPath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularProp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularTypes.java" afterPath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/RegularTypes.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularCallExprImpl.java" afterPath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularCallExprImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularLeftHandExprImpl.java" afterPath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularLeftHandExprImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularPropImpl.java" afterPath="$PROJECT_DIR$/gen/com/netease/regular/lang/psi/impl/RegularPropImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/netease/regular/ide/RegularCommenter.java" afterPath="$PROJECT_DIR$/src/com/netease/regular/ide/RegularCommenter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/netease/regular/lang/lexer/_RegularLexer.flex" afterPath="$PROJECT_DIR$/src/com/netease/regular/lang/lexer/_RegularLexer.flex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/netease/regular/lang/parser/parser.bnf" afterPath="$PROJECT_DIR$/src/com/netease/regular/lang/parser/parser.bnf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/regular/lang/parsing/RegularParsingTest.java" afterPath="$PROJECT_DIR$/tests/com/regular/lang/parsing/RegularParsingTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/regular/lang/lexer/RegularJsLexerTest.java" afterPath="$PROJECT_DIR$/tests/com/regular/lang/lexer/RegularJsLexerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/if.rgl" afterPath="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/if.rgl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/if.txt" afterPath="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/if.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/regular/lang/parsing/data/ParsingTestData.rgl" afterPath="$PROJECT_DIR$/tests/com/regular/lang/parsing/data/ParsingTestData.rgl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/lexTest.html" afterPath="$PROJECT_DIR$/tests/lexTest.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,96 +37,70 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="RegularSyntaxHighlighter.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/netease/regular/ide/highlighting/RegularSyntaxHighlighter.java">
+          <file leaf-file-name="RegularCommenter.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/netease/regular/ide/RegularCommenter.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="44" column="47" lean-forward="false" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
+                <state relative-caret-position="90">
+                  <caret line="22" column="70" lean-forward="false" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
                   <folding>
-                    <element signature="e#0#3570#0" expanded="false" />
-                    <element signature="imports" expanded="false" />
-                    <element signature="e#2943#2944#0" expanded="false" />
-                    <element signature="e#2984#2985#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RegularColorSettingsPage.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/netease/regular/ide/highlighting/RegularColorSettingsPage.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="19" column="88" lean-forward="true" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="88" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
+                    <element signature="e#855#856#0" expanded="true" />
+                    <element signature="e#882#883#0" expanded="true" />
                     <element signature="e#955#956#0" expanded="true" />
-                    <element signature="e#995#996#0" expanded="true" />
+                    <element signature="e#984#985#0" expanded="true" />
+                    <element signature="e#1057#1058#0" expanded="true" />
+                    <element signature="e#1085#1086#0" expanded="true" />
+                    <element signature="e#1167#1168#0" expanded="true" />
+                    <element signature="e#1194#1195#0" expanded="true" />
+                    <element signature="e#1276#1277#0" expanded="true" />
+                    <element signature="e#1303#1304#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="RegularParsingTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/parsing/RegularParsingTest.java">
+          <file leaf-file-name="_RegularLexer.flex" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/netease/regular/lang/lexer/_RegularLexer.flex">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="32" column="4" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+                <state relative-caret-position="105">
+                  <caret line="53" column="17" lean-forward="false" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_RegularLexer.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/gen/com/netease/regular/lang/lexer/_RegularLexer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="135">
+                  <caret line="717" column="13" lean-forward="false" selection-start-line="717" selection-start-column="13" selection-end-line="717" selection-end-column="13" />
                   <folding>
-                    <element signature="e#955#956#0" expanded="true" />
-                    <element signature="e#1018#1019#0" expanded="true" />
-                    <element signature="e#1059#1060#0" expanded="true" />
-                    <element signature="e#1143#1144#0" expanded="true" />
-                    <element signature="e#1270#1271#0" expanded="true" />
-                    <marker date="1486639190000" expanded="false" signature="732:827" ph="..." />
+                    <element signature="e#1481#1482#0" expanded="true" />
+                    <element signature="e#1567#1568#0" expanded="true" />
+                    <element signature="e#11742#11743#0" expanded="true" />
+                    <element signature="e#11778#11779#0" expanded="true" />
+                    <element signature="e#11925#11926#0" expanded="true" />
+                    <element signature="e#11953#11954#0" expanded="true" />
+                    <element signature="e#12680#12681#0" expanded="true" />
+                    <element signature="e#12708#12709#0" expanded="true" />
+                    <element signature="e#12744#12745#0" expanded="true" />
+                    <element signature="e#12789#12790#0" expanded="true" />
+                    <element signature="e#13386#13387#0" expanded="true" />
+                    <element signature="e#13417#13418#0" expanded="true" />
+                    <element signature="e#13555#13556#0" expanded="true" />
+                    <element signature="e#13590#13591#0" expanded="true" />
+                    <element signature="e#13708#13709#0" expanded="true" />
+                    <element signature="e#13771#13772#0" expanded="true" />
+                    <element signature="e#14125#14126#0" expanded="true" />
+                    <element signature="e#14174#14175#0" expanded="true" />
+                    <element signature="e#14272#14273#0" expanded="true" />
+                    <element signature="e#14312#14313#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="JUnit38ClassRunner.class" pinned="false" current-in-tab="false">
-            <entry file="jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/junit-4.12.jar!/org/junit/internal/runners/JUnit38ClassRunner.class">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#1078#1079#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="JUnit3Builder.class" pinned="false" current-in-tab="false">
-            <entry file="jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/junit-4.12.jar!/org/junit/internal/builders/JUnit3Builder.class">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="16" column="71" lean-forward="false" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RunnerBuilder.class" pinned="false" current-in-tab="false">
-            <entry file="jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/junit-4.12.jar!/org/junit/runners/model/RunnerBuilder.class">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ParsingTestCase.java" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/idea/idea2/platform/testFramework/src/com/intellij/testFramework/ParsingTestCase.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="64" column="18" lean-forward="false" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ParsingTestData.rgl" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/parsing/data/ParsingTestData.rgl">
+          <file leaf-file-name="bugfix.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/lexer/data/bugfix.txt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -127,49 +109,74 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="RegularJsLexerTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/lexer/RegularJsLexerTest.java">
+          <file leaf-file-name="comment.rgl" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/lexer/data/comment.rgl">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="63">
-                  <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+                <state relative-caret-position="30">
+                  <caret line="2" column="4" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="if.rgl" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/lexer/data/if.rgl">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="parser.bnf" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/netease/regular/lang/parser/parser.bnf">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-33">
+                  <caret line="76" column="18" lean-forward="false" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
                   <folding>
-                    <element signature="imports" expanded="false" />
-                    <element signature="e#407#408#0" expanded="false" />
-                    <element signature="e#448#449#0" expanded="false" />
-                    <element signature="e#479#480#0" expanded="false" />
-                    <element signature="e#512#513#0" expanded="false" />
-                    <element signature="e#541#542#0" expanded="false" />
-                    <element signature="e#574#575#0" expanded="false" />
-                    <element signature="e#601#602#0" expanded="false" />
-                    <element signature="e#634#635#0" expanded="false" />
-                    <element signature="e#668#669#0" expanded="false" />
-                    <element signature="e#701#702#0" expanded="false" />
-                    <element signature="e#732#733#0" expanded="false" />
-                    <element signature="e#765#766#0" expanded="false" />
-                    <element signature="e#796#797#0" expanded="false" />
-                    <element signature="e#829#830#0" expanded="false" />
+                    <element signature="e#599#2259#0" expanded="true" />
+                    <element signature="e#1239#2257#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="LexerTestCase.java" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/idea/idea2/platform/testFramework/src/com/intellij/testFramework/LexerTestCase.java">
+          <file leaf-file-name="RegularParser.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/gen/com/netease/regular/lang/parser/RegularParser.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-447">
-                  <caret line="107" column="17" lean-forward="false" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
+                <state relative-caret-position="105">
+                  <caret line="6" column="63" lean-forward="false" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
                   <folding>
-                    <element signature="e#0#4517#0" expanded="false" />
-                    <element signature="imports" expanded="false" />
-                    <element signature="e#1249#1250#0" expanded="false" />
-                    <element signature="e#1277#1278#0" expanded="false" />
-                    <element signature="e#1352#1353#0" expanded="false" />
-                    <element signature="e#1399#1400#0" expanded="false" />
-                    <element signature="e#3027#3028#0" expanded="false" />
-                    <element signature="e#3083#3084#0" expanded="false" />
-                    <element signature="e#4011#4012#0" expanded="false" />
-                    <element signature="e#4032#4033#0" expanded="false" />
+                    <element signature="e#505#571#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="RegularJsLexerTest.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/lexer/RegularJsLexerTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="105">
+                  <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+                  <folding>
+                    <element signature="e#479#480#0" expanded="true" />
+                    <element signature="e#512#513#0" expanded="true" />
+                    <element signature="e#541#542#0" expanded="true" />
+                    <element signature="e#574#575#0" expanded="true" />
+                    <element signature="e#606#607#0" expanded="true" />
+                    <element signature="e#639#640#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="comment.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/lexer/data/comment.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="225">
+                  <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -178,28 +185,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="RegularParsingTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/parsing/RegularParsingTest.java">
+          <file leaf-file-name="comment.rgl" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/lexer/data/comment.rgl">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="36" column="76" lean-forward="false" selection-start-line="36" selection-start-column="76" selection-end-line="36" selection-end-column="76" />
-                  <folding>
-                    <element signature="e#955#956#0" expanded="true" />
-                    <element signature="e#1018#1019#0" expanded="true" />
-                    <element signature="e#1059#1060#0" expanded="true" />
-                    <element signature="e#1087#1088#0" expanded="true" />
-                    <element signature="e#1270#1271#0" expanded="true" />
-                    <marker date="1486639190000" expanded="false" signature="732:827" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ParsingTestData.txt" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/parsing/data/ParsingTestData.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+                <state relative-caret-position="105">
+                  <caret line="7" column="4" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -237,6 +227,9 @@
       <find>yy</find>
       <find>string</find>
       <find>YYSTRING_SINGLE</find>
+      <find>comment</find>
+      <find>return CONTE</find>
+      <find>yypushback(4)</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -255,11 +248,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests/com/regular/parsing/RegularLexerTest.java" />
-        <option value="$PROJECT_DIR$/tests/com/regular/parsing/RegularParsingTest.java" />
-        <option value="$PROJECT_DIR$/.idea/RegularPlugin.iml" />
-        <option value="$PROJECT_DIR$/src/com/netease/regular/lang/file/RegularFileTypeFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/netease/regular/lang/file/RegularFileViewProvider.java" />
         <option value="$PROJECT_DIR$/src/com/netease/regular/ide/templates/RegularContext.java" />
         <option value="$PROJECT_DIR$/src/com/netease/regular/ide/templates/RegularProvider.java" />
         <option value="$PROJECT_DIR$/.idea/META-INF/plugin.xml" />
@@ -275,12 +263,9 @@
         <option value="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/ident.txt" />
         <option value="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/list.rgl" />
         <option value="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/list.txt" />
-        <option value="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/if.rgl" />
         <option value="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/include.rgl" />
         <option value="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/bugfix.rgl" />
         <option value="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/directive.rgl" />
-        <option value="$PROJECT_DIR$/tests/com/regular/lang/lexer/RegularJsLexerTest.java" />
-        <option value="/parser.bnf.preview" />
         <option value="$PROJECT_DIR$/src/com/netease/regular/ide/folding/RegularFoldingBuilder.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/CHANGELOG.md" />
@@ -301,9 +286,19 @@
         <option value="$PROJECT_DIR$/tests/com/regular/lang/parsing/RegularParsingTest.java" />
         <option value="$PROJECT_DIR$/tests/com/regular/lang/parsing/data/ParsingTestData.txt" />
         <option value="$PROJECT_DIR$/src/com/netease/regular/lang/lexer/_RegularLexerAfter.flex" />
-        <option value="$PROJECT_DIR$/src/com/netease/regular/lang/parser/parser.bnf" />
         <option value="$PROJECT_DIR$/tests/com/regular/lang/parsing/data/ParsingTestData.rgl" />
+        <option value="$PROJECT_DIR$/tests/lexTest.html" />
+        <option value="$PROJECT_DIR$/src/com/netease/regular/ide/RegularCommenter.java" />
+        <option value="/parser.bnf.preview" />
+        <option value="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/if.txt" />
+        <option value="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/if.rgl" />
+        <option value="$PROJECT_DIR$/tests/com/regular/lang/lexer/RegularJsLexerTest.java" />
+        <option value="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/comment.rgl" />
+        <option value="$PROJECT_DIR$/gen/com/netease/regular/lang/lexer/_RegularLexer.java" />
         <option value="$PROJECT_DIR$/src/com/netease/regular/lang/lexer/_RegularLexer.flex" />
+        <option value="$PROJECT_DIR$/tests/com/regular/lang/lexer/data/comment.txt" />
+        <option value="$PROJECT_DIR$/src/com/netease/regular/lang/parser/parser.bnf" />
+        <option value="$PROJECT_DIR$/gen/com/netease/regular/lang/parser/RegularParser.java" />
       </list>
     </option>
   </component>
@@ -364,6 +359,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -429,40 +426,6 @@
               <option name="myItemId" value="lang" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parsing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegularPlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegularPlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="regular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parsing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -530,20 +493,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="testData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegularPlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegularPlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -571,32 +520,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegularPlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegularPlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="regular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -623,50 +546,12 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lexer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegularPlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegularPlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegularPlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegularPlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="liveTemplates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -680,7 +565,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="YYSTRING_SINGLE&#9;PSI&#9;JAVA://com.netease.regular.lang.lexer._RegularLexer#YYSTRING_SINGLE&#10;settin&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/ide/highlighting/RegularColorSettingsPage.java&#10;setting&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/ide/highlighting/RegularColorSettingsPage.java&#10;SyntaxHighlighterBase&#9;PSI&#9;JAVA://com.intellij.openapi.fileTypes.SyntaxHighlighterBase&#10;STARTCOMMAND&#9;PSI&#9;JAVA://com.netease.regular.lang.psi.RegularTypes#STARTCOMMAND&#10;RegularSyntax&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/ide/highlighting/RegularSyntaxHighlighter.java&#10;RegularFra&#9;PSI&#9;JAVA://com.netease.regular.lang.file.RegularFileViewProvider#Regular_FRAGMENT&#10;bnf&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/lang/parser/parser.bnf&#10;PairedBraceMatcher&#9;PSI&#9;JAVA://com.intellij.lang.PairedBraceMatcher&#10;RegularPar&#9;PSI&#9;JAVA://com.netease.regular.RegularParserDefinition&#10;RegularFile&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/lang/psi/RegularFile.java&#10;plugin.xml&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/out/META-INF/plugin.xml&#10;plugin.x&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/resources/META-INF/plugin.xml&#10;regular&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/lang/lexer/_RegularLexer.flex&#10;RegularW&#9;PSI&#9;JAVA://com.netease.regular.lang.psi.RegularWrapperBlock&#10;_regula&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/lang/lexer/_RegularLexer.flex&#10;_re&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/lang/lexer/_RegularLexer.flex&#10;xml&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/resources/META-INF/plugin.xml&#10;plugin.xm&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/.idea/META-INF/plugin.xml&#10;plug&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/.idea/RegularPlugin.iml" />
+    <property name="SearchEverywhereHistoryKey" value="RegularJSL&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/tests/com/regular/lang/lexer/RegularJsLexerTest.java&#10;pa&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/lang/parser/parser.bnf&#10;YYSTRING_SINGLE&#9;PSI&#9;JAVA://com.netease.regular.lang.lexer._RegularLexer#YYSTRING_SINGLE&#10;settin&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/ide/highlighting/RegularColorSettingsPage.java&#10;setting&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/ide/highlighting/RegularColorSettingsPage.java&#10;SyntaxHighlighterBase&#9;PSI&#9;JAVA://com.intellij.openapi.fileTypes.SyntaxHighlighterBase&#10;STARTCOMMAND&#9;PSI&#9;JAVA://com.netease.regular.lang.psi.RegularTypes#STARTCOMMAND&#10;RegularSyntax&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/ide/highlighting/RegularSyntaxHighlighter.java&#10;RegularFra&#9;PSI&#9;JAVA://com.netease.regular.lang.file.RegularFileViewProvider#Regular_FRAGMENT&#10;bnf&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/lang/parser/parser.bnf&#10;PairedBraceMatcher&#9;PSI&#9;JAVA://com.intellij.lang.PairedBraceMatcher&#10;RegularPar&#9;PSI&#9;JAVA://com.netease.regular.RegularParserDefinition&#10;RegularFile&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/lang/psi/RegularFile.java&#10;plugin.xml&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/out/META-INF/plugin.xml&#10;plugin.x&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/resources/META-INF/plugin.xml&#10;regular&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/lang/lexer/_RegularLexer.flex&#10;RegularW&#9;PSI&#9;JAVA://com.netease.regular.lang.psi.RegularWrapperBlock&#10;_regula&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/lang/lexer/_RegularLexer.flex&#10;_re&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/src/com/netease/regular/lang/lexer/_RegularLexer.flex&#10;xml&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/resources/META-INF/plugin.xml&#10;plugin.xm&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/.idea/META-INF/plugin.xml&#10;plug&#9;FILE&#9;file:///Users/abnerzheng/netease/RegularPlugin/.idea/RegularPlugin.iml" />
     <property name="FullScreen" value="true" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/com/netease/regular/lang/lexer/_RegularLexer.flex" />
   </component>
@@ -706,33 +591,7 @@
       <recent name="$PROJECT_DIR$/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RegularParsingTest">
-    <configuration default="false" name="RegularTokenizerSpecTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.regular.lang.lexer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="RegularPlugin" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.regular.lang.parsing" />
-      <option name="MAIN_CLASS_NAME" value="com.regular.lang.parsing.RegularTokenizerSpecTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Plugin.Plugins">
     <configuration default="false" name="RegularJsLexerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -759,32 +618,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="RegularJsLexerTest.testIdent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.regular.lang.lexer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="RegularPlugin" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.regular.lang.lexer" />
-      <option name="MAIN_CLASS_NAME" value="com.regular.lang.lexer.RegularJsLexerTest" />
-      <option name="METHOD_NAME" value="testIdent" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="RegularParsingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -799,6 +632,84 @@
       <option name="MAIN_CLASS_NAME" value="com.regular.lang.parsing.RegularParsingTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea -Xbootclasspath/p:../out/classes/production/boot -XX:+HeapDumpOnOutOfMemoryError -Xmx512m -XX:MaxPermSize=320m -Didea.system.path=../test-system -Didea.home.path=../ -Didea.config.path=../test-config -Didea.test.group=ALL_EXCLUDE_DEFINED " />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="RegularJsLexerTest.testIf" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.regular.lang.lexer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="RegularPlugin" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.regular.lang.lexer" />
+      <option name="MAIN_CLASS_NAME" value="com.regular.lang.lexer.RegularJsLexerTest" />
+      <option name="METHOD_NAME" value="testIf" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea -Xbootclasspath/p:../out/classes/production/boot -XX:+HeapDumpOnOutOfMemoryError -Xmx512m -XX:MaxPermSize=320m -Didea.system.path=../test-system -Didea.home.path=../ -Didea.config.path=../test-config -Didea.test.group=ALL_EXCLUDE_DEFINED " />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="RegularJsLexerTest.testComment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.regular.lang.lexer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="RegularPlugin" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.regular.lang.lexer" />
+      <option name="MAIN_CLASS_NAME" value="com.regular.lang.lexer.RegularJsLexerTest" />
+      <option name="METHOD_NAME" value="testComment" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="RegularJsLexerTest.testComment (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.regular.lang.lexer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="RegularPlugin" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.regular.lang.lexer" />
+      <option name="MAIN_CLASS_NAME" value="com.regular.lang.lexer.RegularJsLexerTest" />
+      <option name="METHOD_NAME" value="testComment" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea -Xbootclasspath/p:../out/classes/production/boot -XX:+HeapDumpOnOutOfMemoryError -Xmx512m -XX:MaxPermSize=320m -Didea.system.path=../test-system -Didea.home.path=../ -Didea.config.path=../test-config -Didea.test.group=ALL_EXCLUDE_DEFINED " />
       <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
@@ -1218,20 +1129,22 @@
       <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
-    <list size="6">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="JUnit.RegularCodeInsightTest" />
       <item index="1" class="java.lang.String" itemvalue="Plugin.Plugins" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.RegularTokenizerSpecTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.RegularJsLexerTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.RegularJsLexerTest.testIdent" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.RegularParsingTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.RegularJsLexerTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RegularParsingTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RegularJsLexerTest.testIf" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.RegularJsLexerTest.testComment" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.RegularJsLexerTest.testComment (1)" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.RegularParsingTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RegularJsLexerTest.testComment (1)" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.RegularJsLexerTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.RegularJsLexerTest.testIdent" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.RegularTokenizerSpecTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.RegularJsLexerTest.testComment" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.RegularJsLexerTest.testIf" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.RegularParsingTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1251,7 +1164,8 @@
       <workItem from="1483950582953" duration="20646000" />
       <workItem from="1484038737178" duration="14509000" />
       <workItem from="1486606600125" duration="9383000" />
-      <workItem from="1486636949030" duration="5008000" />
+      <workItem from="1486636949030" duration="5421000" />
+      <workItem from="1486654840055" duration="10446000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1484038464477</created>
@@ -1264,39 +1178,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RegularJsLexerTest - 2017.02.09 at 19h 41m 35s.xml">
-      <configuration name="RegularJsLexerTest" configurationId="JUnit" />
+    <history-entry file="RegularJsLexerTest_testComment_(1) - 2017.02.10 at 13h 06m 41s.xml">
+      <configuration name="RegularJsLexerTest.testComment (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegularParsingTest - 2017.02.09 at 19h 20m 11s.xml">
-      <configuration name="RegularParsingTest" configurationId="JUnit" />
+    <history-entry file="RegularJsLexerTest_testComment_(1) - 2017.02.10 at 13h 07m 24s.xml">
+      <configuration name="RegularJsLexerTest.testComment (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegularParsingTest - 2017.02.09 at 19h 26m 19s.xml">
-      <configuration name="RegularParsingTest" configurationId="JUnit" />
+    <history-entry file="RegularJsLexerTest_testComment_(1) - 2017.02.10 at 13h 12m 11s.xml">
+      <configuration name="RegularJsLexerTest.testComment (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegularParsingTest - 2017.02.09 at 19h 42m 11s.xml">
-      <configuration name="RegularParsingTest" configurationId="JUnit" />
+    <history-entry file="RegularJsLexerTest_testComment_(1) - 2017.02.10 at 13h 12m 43s.xml">
+      <configuration name="RegularJsLexerTest.testComment (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegularParsingTest - 2017.02.09 at 20h 45m 01s.xml">
-      <configuration name="RegularParsingTest" configurationId="JUnit" />
+    <history-entry file="RegularJsLexerTest_testComment_(1) - 2017.02.10 at 13h 15m 42s.xml">
+      <configuration name="RegularJsLexerTest.testComment (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegularParsingTest - 2017.02.09 at 20h 47m 27s.xml">
-      <configuration name="RegularParsingTest" configurationId="JUnit" />
+    <history-entry file="RegularJsLexerTest_testComment_(1) - 2017.02.10 at 13h 16m 18s.xml">
+      <configuration name="RegularJsLexerTest.testComment (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegularParsingTest - 2017.02.09 at 20h 50m 33s.xml">
-      <configuration name="RegularParsingTest" configurationId="JUnit" />
+    <history-entry file="RegularJsLexerTest_testComment_(1) - 2017.02.10 at 13h 16m 58s.xml">
+      <configuration name="RegularJsLexerTest.testComment (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegularParsingTest - 2017.02.09 at 20h 52m 08s.xml">
-      <configuration name="RegularParsingTest" configurationId="JUnit" />
+    <history-entry file="RegularJsLexerTest_testComment_(1) - 2017.02.10 at 13h 18m 36s.xml">
+      <configuration name="RegularJsLexerTest.testComment (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegularParsingTest - 2017.02.09 at 20h 52m 58s.xml">
-      <configuration name="RegularParsingTest" configurationId="JUnit" />
+    <history-entry file="RegularJsLexerTest_testComment_(1) - 2017.02.10 at 13h 19m 20s.xml">
+      <configuration name="RegularJsLexerTest.testComment (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegularParsingTest - 2017.02.09 at 20h 59m 44s.xml">
-      <configuration name="RegularParsingTest" configurationId="JUnit" />
+    <history-entry file="RegularJsLexerTest_testComment_(1) - 2017.02.10 at 13h 22m 10s.xml">
+      <configuration name="RegularJsLexerTest.testComment (1)" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49546000" />
+    <option name="totallyTimeSpent" value="60405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1322,8 +1236,8 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="PsiViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37883684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25282714" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1463,7 +1377,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/gen/com/netease/regular/lang/lexer/_RegularLexer.java</url>
-          <line>617</line>
+          <line>627</line>
           <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
@@ -1483,91 +1397,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/idea/idea2/platform/lang-api/src/com/intellij/lang/PairedBraceMatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="25" column="47" lean-forward="true" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/idea/idea2/platform/editor-ui-api/src/com/intellij/openapi/fileTypes/SyntaxHighlighterFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="68" column="36" lean-forward="false" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/idea/idea2/platform/extensions/src/com/intellij/openapi/extensions/ExtensionPointName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/idea/idea2/platform/lang-impl/src/com/intellij/ide/highlighter/custom/CustomFileHighlighter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="62" column="66" lean-forward="false" selection-start-line="62" selection-start-column="66" selection-end-line="62" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/netease/regular/ide/highlighting/RegularSyntaxHighlighterFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/idea/idea2/platform/editor-ui-api/src/com/intellij/openapi/editor/DefaultLanguageHighlighterColors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-145">
-          <caret line="65" column="40" lean-forward="false" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/idea/idea2/platform/testFramework/src/com/intellij/testFramework/fixtures/impl/CodeInsightTestFixtureImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="1195" column="0" lean-forward="false" selection-start-line="1195" selection-start-column="0" selection-end-line="1195" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/idea/idea2/platform/testFramework/src/com/intellij/testFramework/fixtures/IdeaTestFixture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="27" column="7" lean-forward="false" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/idea/idea2/java/testFramework/src/com/intellij/testFramework/fixtures/impl/JavaTestFixtureFactoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/idea/idea2/java/testFramework/src/com/intellij/testFramework/fixtures/JavaTestFixtureFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="34" column="45" lean-forward="false" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/idea/idea2/java/testFramework/src/com/intellij/testFramework/fixtures/LightCodeInsightFixtureTestCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/regular/ide/data/folding.rgl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/com/regular/ide/RegularCodeInsightTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1701,7 +1530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1709,7 +1537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="50" column="37" lean-forward="false" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1731,7 +1558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1739,7 +1565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="55" column="90" lean-forward="false" selection-start-line="55" selection-start-column="90" selection-end-line="55" selection-end-column="90" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1758,14 +1583,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/netease/regular/lang/parser/parser.bnf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="17" lean-forward="false" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1795,75 +1612,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/netease/regular/ide/highlighting/RegularColorSettingsPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="19" column="88" lean-forward="true" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="88" />
+        <state relative-caret-position="135">
+          <caret line="19" column="88" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="88" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#955#956#0" expanded="true" />
-            <element signature="e#995#996#0" expanded="true" />
+            <element signature="e#1071#1072#0" expanded="false" />
+            <element signature="e#1124#1125#0" expanded="false" />
+            <element signature="e#1622#1623#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+            <element signature="e#1739#1740#0" expanded="false" />
+            <element signature="e#1773#1774#0" expanded="false" />
+            <element signature="e#1854#1855#0" expanded="false" />
+            <element signature="e#1904#1905#0" expanded="false" />
+            <element signature="e#1969#1970#0" expanded="false" />
+            <element signature="e#2001#2002#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ParsingTestData.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ParsingTestData.rgl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/idea/idea2/platform/testFramework/src/com/intellij/testFramework/LexerTestCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-447">
-          <caret line="107" column="17" lean-forward="false" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#4517#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1249#1250#0" expanded="false" />
-            <element signature="e#1277#1278#0" expanded="false" />
-            <element signature="e#1352#1353#0" expanded="false" />
-            <element signature="e#1399#1400#0" expanded="false" />
-            <element signature="e#3027#3028#0" expanded="false" />
-            <element signature="e#3083#3084#0" expanded="false" />
-            <element signature="e#4011#4012#0" expanded="false" />
-            <element signature="e#4032#4033#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/lexer/RegularJsLexerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#407#408#0" expanded="false" />
-            <element signature="e#448#449#0" expanded="false" />
-            <element signature="e#479#480#0" expanded="false" />
-            <element signature="e#512#513#0" expanded="false" />
-            <element signature="e#541#542#0" expanded="false" />
-            <element signature="e#574#575#0" expanded="false" />
-            <element signature="e#601#602#0" expanded="false" />
-            <element signature="e#634#635#0" expanded="false" />
-            <element signature="e#668#669#0" expanded="false" />
-            <element signature="e#701#702#0" expanded="false" />
-            <element signature="e#732#733#0" expanded="false" />
-            <element signature="e#765#766#0" expanded="false" />
-            <element signature="e#796#797#0" expanded="false" />
-            <element signature="e#829#830#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ParsingTestData.txt" />
+    <entry file="file://$PROJECT_DIR$/tests/ParsingTestData.rgl" />
     <entry file="jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/junit-4.12.jar!/org/junit/internal/runners/JUnit38ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1890,41 +1657,251 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/idea/idea2/platform/testFramework/src/com/intellij/testFramework/ParsingTestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="64" column="18" lean-forward="false" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#13845#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#7397#7398#0" expanded="false" />
+            <element signature="e#7465#7466#0" expanded="false" />
+            <element signature="e#7761#7762#0" expanded="false" />
+            <element signature="e#7858#7859#0" expanded="false" />
+            <element signature="e#8106#8107#0" expanded="false" />
+            <element signature="e#8197#8198#0" expanded="false" />
+            <element signature="e#8259#8260#0" expanded="false" />
+            <element signature="e#8285#8286#0" expanded="false" />
+            <element signature="e#8328#8329#0" expanded="false" />
+            <element signature="e#8357#8358#0" expanded="false" />
+            <element signature="e#8549#8550#0" expanded="false" />
+            <element signature="e#8597#8598#0" expanded="false" />
+            <element signature="e#8647#8648#0" expanded="false" />
+            <element signature="e#8699#8700#0" expanded="false" />
+            <element signature="e#8738#8739#0" expanded="false" />
+            <element signature="e#8760#8761#0" expanded="false" />
+            <element signature="e#8796#8797#0" expanded="false" />
+            <element signature="e#8818#8819#0" expanded="false" />
+            <element signature="e#8860#8861#0" expanded="false" />
+            <element signature="e#8881#8882#0" expanded="false" />
+            <element signature="e#10375#10376#0" expanded="false" />
+            <element signature="e#10432#10433#0" expanded="false" />
+            <element signature="e#13258#13259#0" expanded="false" />
+            <element signature="e#13304#13305#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/idea/idea2/platform/testFramework/src/com/intellij/testFramework/LexerTestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="107" column="17" lean-forward="false" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#4517#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1249#1250#0" expanded="false" />
+            <element signature="e#1277#1278#0" expanded="false" />
+            <element signature="e#1352#1353#0" expanded="false" />
+            <element signature="e#1399#1400#0" expanded="false" />
+            <element signature="e#3027#3028#0" expanded="false" />
+            <element signature="e#3083#3084#0" expanded="false" />
+            <element signature="e#4011#4012#0" expanded="false" />
+            <element signature="e#4032#4033#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/parsing/RegularParsingTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="32" column="4" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
           <folding>
-            <element signature="e#955#956#0" expanded="true" />
-            <element signature="e#1018#1019#0" expanded="true" />
-            <element signature="e#1059#1060#0" expanded="true" />
-            <element signature="e#1143#1144#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
+            <element signature="e#0#1435#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1322#1323#0" expanded="false" />
+            <element signature="e#1349#1350#0" expanded="false" />
+            <element signature="e#1404#1405#0" expanded="false" />
+            <element signature="e#1431#1432#0" expanded="false" />
             <marker date="1486639190000" expanded="false" signature="732:827" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/idea/idea2/platform/testFramework/src/com/intellij/testFramework/ParsingTestCase.java">
+    <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/parsing/data/ParsingTestData.rgl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="64" column="18" lean-forward="false" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+        <state relative-caret-position="150">
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/lexTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/idea/idea2/xml/impl/src/com/intellij/lang/xml/XmlCommenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+          <folding>
+            <element signature="e#1303#1304#0" expanded="false" />
+            <element signature="e#1326#1327#0" expanded="false" />
+            <element signature="e#1392#1393#0" expanded="false" />
+            <element signature="e#1414#1415#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/idea/idea2/platform/core-api/src/com/intellij/lang/Commenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#2268#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/parsing/data/ParsingTestData.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="120">
           <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/parsing/data/ParsingTestData.rgl">
+    <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/lexer/data/if.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/netease/regular/ide/RegularCommenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="22" column="70" lean-forward="false" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
+          <folding>
+            <element signature="e#855#856#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#955#956#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1057#1058#0" expanded="true" />
+            <element signature="e#1085#1086#0" expanded="true" />
+            <element signature="e#1167#1168#0" expanded="true" />
+            <element signature="e#1194#1195#0" expanded="true" />
+            <element signature="e#1276#1277#0" expanded="true" />
+            <element signature="e#1303#1304#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/lexer/RegularJsLexerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/lexer/data/bugfix.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/lexer/data/if.rgl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/com/netease/regular/lang/lexer/_RegularLexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="717" column="13" lean-forward="false" selection-start-line="717" selection-start-column="13" selection-end-line="717" selection-end-column="13" />
+          <folding>
+            <element signature="e#1481#1482#0" expanded="true" />
+            <element signature="e#1567#1568#0" expanded="true" />
+            <element signature="e#11742#11743#0" expanded="true" />
+            <element signature="e#11778#11779#0" expanded="true" />
+            <element signature="e#11925#11926#0" expanded="true" />
+            <element signature="e#11953#11954#0" expanded="true" />
+            <element signature="e#12680#12681#0" expanded="true" />
+            <element signature="e#12708#12709#0" expanded="true" />
+            <element signature="e#12744#12745#0" expanded="true" />
+            <element signature="e#12789#12790#0" expanded="true" />
+            <element signature="e#13386#13387#0" expanded="true" />
+            <element signature="e#13417#13418#0" expanded="true" />
+            <element signature="e#13555#13556#0" expanded="true" />
+            <element signature="e#13590#13591#0" expanded="true" />
+            <element signature="e#13708#13709#0" expanded="true" />
+            <element signature="e#13771#13772#0" expanded="true" />
+            <element signature="e#14125#14126#0" expanded="true" />
+            <element signature="e#14174#14175#0" expanded="true" />
+            <element signature="e#14272#14273#0" expanded="true" />
+            <element signature="e#14312#14313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/netease/regular/lang/lexer/_RegularLexer.flex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="53" column="17" lean-forward="false" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/lexer/data/comment.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/netease/regular/lang/parser/parser.bnf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="76" column="18" lean-forward="false" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
+          <folding>
+            <element signature="e#599#2259#0" expanded="true" />
+            <element signature="e#1239#2257#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/com/netease/regular/lang/parser/RegularParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="6" column="63" lean-forward="false" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+          <folding>
+            <element signature="e#505#571#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/regular/lang/lexer/data/comment.rgl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="5" />
           <folding />
         </state>
       </provider>

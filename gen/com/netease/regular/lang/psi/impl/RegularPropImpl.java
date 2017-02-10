@@ -38,4 +38,10 @@ public class RegularPropImpl extends ASTWrapperPsiElement implements RegularProp
     return findChildByType(NUMBER);
   }
 
+  @Override
+  @Nullable
+  public PsiElement getString() {
+    return findChildByType(STRING);
+  }
+
 }

@@ -31,4 +31,7 @@ public interface RegularLeftHandExpr extends PsiElement {
   @Nullable
   PsiElement getNumber();
 
+  @Nullable
+  PsiElement getString();
+
 }

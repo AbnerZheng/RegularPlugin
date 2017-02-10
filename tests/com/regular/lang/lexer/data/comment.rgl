@@ -1,6 +1,6 @@
 {#if test}
 <!--<div>hello</div>-->
-<!--<p>name</p>-->
+<p>name</p>
 <!--{#elseif test2}-->
 <p class="cl"></p>
 {#else}

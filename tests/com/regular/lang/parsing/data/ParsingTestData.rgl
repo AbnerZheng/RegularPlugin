@@ -9,5 +9,5 @@ test
 {/if}
 
 {#list @(items) as item}
-{test + 'test'}
+{test++}
 {/list}

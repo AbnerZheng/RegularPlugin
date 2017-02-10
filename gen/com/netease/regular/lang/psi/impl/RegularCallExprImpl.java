@@ -74,4 +74,10 @@ public class RegularCallExprImpl extends ASTWrapperPsiElement implements Regular
     return findChildByType(NUMBER);
   }
 
+  @Override
+  @Nullable
+  public PsiElement getString() {
+    return findChildByType(STRING);
+  }
+
 }

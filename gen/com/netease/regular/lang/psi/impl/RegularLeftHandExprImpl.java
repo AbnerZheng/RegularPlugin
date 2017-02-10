@@ -74,4 +74,10 @@ public class RegularLeftHandExprImpl extends ASTWrapperPsiElement implements Reg
     return findChildByType(NUMBER);
   }
 
+  @Override
+  @Nullable
+  public PsiElement getString() {
+    return findChildByType(STRING);
+  }
+
 }

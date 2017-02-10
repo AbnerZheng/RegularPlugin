@@ -13,4 +13,7 @@ public interface RegularProp extends PsiElement {
   @Nullable
   PsiElement getNumber();
 
+  @Nullable
+  PsiElement getString();
+
 }

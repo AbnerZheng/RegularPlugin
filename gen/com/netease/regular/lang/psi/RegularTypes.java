@@ -40,6 +40,7 @@ public interface RegularTypes {
   IElementType BY = new RegularTokenType("by");
   IElementType COLON = new RegularTokenType(":");
   IElementType COMMA = new RegularTokenType(",");
+  IElementType COMMENT = new RegularTokenType("COMMENT");
   IElementType CONTENT = new RegularTokenType("CONTENT");
   IElementType DIVASSIGN = new RegularTokenType("/=");
   IElementType DOT = new RegularTokenType(".");

@@ -4,7 +4,7 @@ package com.netease.regular.lang.parser;
 import com.intellij.lang.PsiBuilder;
 import com.intellij.lang.PsiBuilder.Marker;
 import static com.netease.regular.lang.psi.RegularTypes.*;
-import static com.intellij.lang.parser.GeneratedParserUtilBase.*;
+import static com.netease.regular.lang.parser.RegularParserUtil.*;
 import com.intellij.psi.tree.IElementType;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.tree.TokenSet;
@@ -1016,7 +1016,7 @@ public class RegularParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // CONTENT | ifExpr | listExpr | interpolationExpr | includeExpr
+  // CONTENT | ifExpr | listExpr | interpolationExpr | includeExpr | COMMENT
   static boolean statement(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "statement")) return false;
     boolean r;
@@ -1026,6 +1026,7 @@ public class RegularParser implements PsiParser, LightPsiParser {
     if (!r) r = listExpr(b, l + 1);
     if (!r) r = interpolationExpr(b, l + 1);
     if (!r) r = includeExpr(b, l + 1);
+    if (!r) r = consumeToken(b, COMMENT);
     exit_section_(b, m, null, r);
     return r;
   }

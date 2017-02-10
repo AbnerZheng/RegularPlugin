@@ -23,10 +23,12 @@ import static com.netease.regular.lang.psi.RegularTypes.*;
 %function advance
 %type IElementType
 %unicode
-%state YYCONTENT, YYSTRING, YYSTRING_SINGLE
+%state YYCONTENT, YYTAG, YYCOMMENT
 
 EOL=\R
-WHITE_SPACE=\s+
+LineTerminator = \r|\n|\r\n
+
+WHITE_SPACE={LineTerminator} | [ \t\f]
 
 SPACE=[ \t\n\x0B\f\r]+
 CONTENT=\"[^\"\{]*\"
@@ -35,12 +37,33 @@ ID=[_$a-zA-Z][_$a-zA-Z_0-9]*
 
 %%
 <YYINITIAL> {
+        {WHITE_SPACE}  {}
        "{"             { yypushback(1); yybegin(YYCONTENT);}
-        [^{]+           { return CONTENT; }
+        "<!--"          { yybegin(YYCOMMENT);}
+        [^{]           { yypushback(1); yybegin(YYTAG);}
+}
+
+<YYCOMMENT>{
+        ~"-->" { yybegin(YYINITIAL); return COMMENT;}
+}
+
+<YYTAG>{
+    {WHITE_SPACE}  {}
+    "{"         {yypushback(1); yybegin(YYCONTENT);}
+    ~("<!--"|"{")     {
+                  if(yytext().toString().endsWith("{")){
+                    yypushback(1);
+                    yybegin(YYCONTENT);
+                    return CONTENT;
+                  }
+                  yypushback(4);
+                  yybegin(YYCOMMENT);
+                  return CONTENT;
+    }
+    [^{]+       { return CONTENT;}
 }
 <YYCONTENT> {
   {WHITE_SPACE}      { return WHITE_SPACE; }
-
   "{"                { return LBRACE; }
   "}"                { yybegin(YYINITIAL); return RBRACE; }
   "["                { return LBRAKET; }
@@ -83,31 +106,6 @@ ID=[_$a-zA-Z][_$a-zA-Z_0-9]*
 
   {NUMBER}           { return NUMBER; }
   {ID}               { return ID; }
-
 }
-
-//<YYSTRING> {
-//    \"               { yybegin(YYCONTENT); return STRING; }
-//    [^\n\r\"\\]+                   { string.append( yytext() ); }
-//          \\t                            { string.append('\t'); }
-//          \\n                            { string.append('\n'); }
-//
-//          \\r                            { string.append('\r'); }
-//          \\\"                           { string.append('\"'); }
-//          \\                             { string.append('\\'); }
-//
-//}
-//
-//<YYSTRING_SINGLE> {
-//    "'"               { yybegin(YYCONTENT); return STRING; }
-//    [^\n\r\"\\]+                   { string.append( yytext() ); }
-//          \\t                            { string.append('\t'); }
-//          \\n                            { string.append('\n'); }
-//
-//          \\r                            { string.append('\r'); }
-//          \\\"                           { string.append('\"'); }
-//          \\                             { string.append('\\'); }
-//
-//}
 
 [^] { return BAD_CHARACTER; }

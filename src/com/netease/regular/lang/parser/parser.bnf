@@ -32,6 +32,8 @@
 
 //    psiImplUtilClass = "com.netease.regular.lang.parser.RegularParserUtil"
     tokens=[
+        COMMENT = 'regexp:<!--([^-]|-[^-]|--+[^->])*-*-->'
+        STRING =  "regexp:\"([^\"\\]|\\.)*\"|'([^'\\]|\\.)*'"
         LBRACE = '{'
         RBRACE = '}'
         LBRAKET = '['
@@ -73,7 +75,7 @@
     ]
 }
 file ::= statement*
-private statement ::= CONTENT | ifExpr | listExpr | interpolationExpr | includeExpr
+private statement ::= CONTENT | ifExpr | listExpr | interpolationExpr | includeExpr | COMMENT
 
 ifExpr ::= STARTCOMMAND IF expression RBRACE wrapperBlock? elseifExpr? elseExpr? ENDCOMMAND IF RBRACE
 
