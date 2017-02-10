@@ -151,24 +151,24 @@ public class RegularParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // equal | equal '&&' and
+  // equal '&&' and | equal
   static boolean and(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "and")) return false;
     boolean r;
     Marker m = enter_section_(b);
-    r = equal(b, l + 1);
-    if (!r) r = and_1(b, l + 1);
+    r = and_0(b, l + 1);
+    if (!r) r = equal(b, l + 1);
     exit_section_(b, m, null, r);
     return r;
   }
 
   // equal '&&' and
-  private static boolean and_1(PsiBuilder b, int l) {
-    if (!recursion_guard_(b, l, "and_1")) return false;
+  private static boolean and_0(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "and_0")) return false;
     boolean r;
     Marker m = enter_section_(b);
     r = equal(b, l + 1);
-    r = r && consumeToken(b, "&&");
+    r = r && consumeToken(b, ANDOP);
     r = r && and(b, l + 1);
     exit_section_(b, m, null, r);
     return r;
@@ -370,21 +370,21 @@ public class RegularParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // or
-  //             | or '?' assign COLON assign
+  // or '?' assign COLON assign
+  //             | or
   static boolean condition(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "condition")) return false;
     boolean r;
     Marker m = enter_section_(b);
-    r = or(b, l + 1);
-    if (!r) r = condition_1(b, l + 1);
+    r = condition_0(b, l + 1);
+    if (!r) r = or(b, l + 1);
     exit_section_(b, m, null, r);
     return r;
   }
 
   // or '?' assign COLON assign
-  private static boolean condition_1(PsiBuilder b, int l) {
-    if (!recursion_guard_(b, l, "condition_1")) return false;
+  private static boolean condition_0(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "condition_0")) return false;
     boolean r;
     Marker m = enter_section_(b);
     r = or(b, l + 1);
@@ -875,24 +875,24 @@ public class RegularParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // and | and '&&' or
+  // and '||' or | and
   static boolean or(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "or")) return false;
     boolean r;
     Marker m = enter_section_(b);
-    r = and(b, l + 1);
-    if (!r) r = or_1(b, l + 1);
+    r = or_0(b, l + 1);
+    if (!r) r = and(b, l + 1);
     exit_section_(b, m, null, r);
     return r;
   }
 
-  // and '&&' or
-  private static boolean or_1(PsiBuilder b, int l) {
-    if (!recursion_guard_(b, l, "or_1")) return false;
+  // and '||' or
+  private static boolean or_0(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "or_0")) return false;
     boolean r;
     Marker m = enter_section_(b);
     r = and(b, l + 1);
-    r = r && consumeToken(b, "&&");
+    r = r && consumeToken(b, OROP);
     r = r && or(b, l + 1);
     exit_section_(b, m, null, r);
     return r;
@@ -1062,8 +1062,8 @@ public class RegularParser implements PsiParser, LightPsiParser {
     Marker m = enter_section_(b, l, _NONE_, UNARY_OPERATOR, "<unary operator>");
     r = consumeToken(b, ADD);
     if (!r) r = consumeToken(b, SUB);
-    if (!r) r = consumeToken(b, "~");
-    if (!r) r = consumeToken(b, "!");
+    if (!r) r = consumeToken(b, BITNOTOP);
+    if (!r) r = consumeToken(b, NOTOP);
     exit_section_(b, l, m, r, false, null);
     return r;
   }

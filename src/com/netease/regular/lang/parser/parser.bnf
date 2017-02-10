@@ -19,7 +19,7 @@
 
 {
     parserClass = "com.netease.regular.lang.parser.RegularParser"
-  parserUtilClass="com.netease.regular.lang.parser.RegularParserUtil2"
+    parserUtilClass="com.netease.regular.lang.parser.RegularParserUtil"
 
     extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
     psiPackage = "com.netease.regular.lang.psi"
@@ -65,6 +65,10 @@
         MODASSIGN = '%='
         ADD = '+'
         SUB = '-'
+        NOTOP = '!'
+        BITNOTOP = '~'
+        ANDOP = '&&'
+        OROP = '||'
         COMMA = ','
         COLON = ':'
         LPARAM = '('
@@ -117,18 +121,18 @@ callExprSuffix ::= LPARAM args? RPARAM
                  | propertyReferenceSuffix
 args ::= assign (COMMA assign)*
 
-// conditon::= or
-//           | or ? assign : assign
-private condition ::= or
-            | or '?' assign COLON assign
+// conditon::= or ? assign : assign
+//           | or
+private condition ::= or '?' assign COLON assign
+            | or
 
-// or ::= and
-//      | and && or
-private or ::= and | and '&&' or
+// or ::= and || or
+//      | and
+private or ::=  and '||' or | and
 
-// and ::= equal
-//       | equal && and
-private and ::= equal | equal '&&' and
+// and ::= equal && and
+//       | equal
+private and ::= equal '&&' and | equal
 
 private equal ::= relation (equationOperator relation)*
 

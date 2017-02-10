@@ -23,6 +23,9 @@ public class RegularJsLexerTest extends LexerTestCase {
         doFileTest("rgl");
     }
 
+    public void testNei(){
+        doFileTest("rgl");
+    }
     public void testComment(){
         doFileTest("rgl");
     }

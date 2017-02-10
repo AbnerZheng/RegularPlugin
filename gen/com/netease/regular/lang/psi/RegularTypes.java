@@ -34,9 +34,11 @@ public interface RegularTypes {
 
   IElementType ADD = new RegularTokenType("+");
   IElementType ADDASSIGN = new RegularTokenType("+=");
+  IElementType ANDOP = new RegularTokenType("&&");
   IElementType AS = new RegularTokenType("as");
   IElementType ASSIGNOP = new RegularTokenType("=");
   IElementType AT = new RegularTokenType("@");
+  IElementType BITNOTOP = new RegularTokenType("~");
   IElementType BY = new RegularTokenType("by");
   IElementType COLON = new RegularTokenType(":");
   IElementType COMMA = new RegularTokenType(",");
@@ -59,8 +61,10 @@ public interface RegularTypes {
   IElementType LPARAM = new RegularTokenType("(");
   IElementType MODASSIGN = new RegularTokenType("%=");
   IElementType MULASSIGN = new RegularTokenType("*=");
+  IElementType NOTOP = new RegularTokenType("!");
   IElementType NULL = new RegularTokenType("null");
   IElementType NUMBER = new RegularTokenType("NUMBER");
+  IElementType OROP = new RegularTokenType("||");
   IElementType RBRACE = new RegularTokenType("}");
   IElementType RBRAKET = new RegularTokenType("]");
   IElementType RPARAM = new RegularTokenType(")");
