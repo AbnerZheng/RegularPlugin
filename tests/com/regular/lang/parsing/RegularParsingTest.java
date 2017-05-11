@@ -35,6 +35,10 @@ public class RegularParsingTest extends ParsingTestCase {
         doTest(true);
     }
 
+    public void testifExpr(){
+        doTest(true);
+    }
+
     @Override
     protected String getTestDataPath() {
         return Paths.get(RegularTestUtil.getBaseTestDataPath(), "parsing").toString();

@@ -38,6 +38,8 @@ public interface RegularTypes {
   IElementType AS = new RegularTokenType("as");
   IElementType ASSIGNOP = new RegularTokenType("=");
   IElementType AT = new RegularTokenType("@");
+  IElementType BIGGER = new RegularTokenType(">");
+  IElementType BIGGEREQUAL = new RegularTokenType(">=");
   IElementType BITNOTOP = new RegularTokenType("~");
   IElementType BY = new RegularTokenType("by");
   IElementType COLON = new RegularTokenType(":");
@@ -68,6 +70,8 @@ public interface RegularTypes {
   IElementType RBRACE = new RegularTokenType("}");
   IElementType RBRAKET = new RegularTokenType("]");
   IElementType RPARAM = new RegularTokenType(")");
+  IElementType SMALLER = new RegularTokenType("<");
+  IElementType SMALLEREQUAL = new RegularTokenType("<=");
   IElementType STARTCOMMAND = new RegularTokenType("{#");
   IElementType STRICTEQUAL = new RegularTokenType("===");
   IElementType STRING = new RegularTokenType("STRING");

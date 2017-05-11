@@ -6,8 +6,11 @@ import com.intellij.lang.javascript.JavaScriptFileType;
  * Created by abnerzheng on 2017/5/10.
  */
 public class RegularFormatterSampleFileTest extends RegularFormatterTest{
-  public void testRuleAsRoot()
-    throws Exception {
+  public void testBaseCase() throws Exception {
+    doFileBasedTest();
+  }
+
+  public void testIfExpr() throws Exception{
     doFileBasedTest();
   }
 

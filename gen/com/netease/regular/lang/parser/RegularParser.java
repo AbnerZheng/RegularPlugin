@@ -1009,15 +1009,15 @@ public class RegularParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // '<' | '>' | '>=' | '<='
+  // SMALLER | BIGGER | BIGGEREQUAL | SMALLEREQUAL
   public static boolean relationOperator(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "relationOperator")) return false;
     boolean r;
     Marker m = enter_section_(b, l, _NONE_, RELATION_OPERATOR, "<relation operator>");
-    r = consumeToken(b, "<");
-    if (!r) r = consumeToken(b, ">");
-    if (!r) r = consumeToken(b, ">=");
-    if (!r) r = consumeToken(b, "<=");
+    r = consumeToken(b, SMALLER);
+    if (!r) r = consumeToken(b, BIGGER);
+    if (!r) r = consumeToken(b, BIGGEREQUAL);
+    if (!r) r = consumeToken(b, SMALLEREQUAL);
     exit_section_(b, l, m, r, false, null);
     return r;
   }

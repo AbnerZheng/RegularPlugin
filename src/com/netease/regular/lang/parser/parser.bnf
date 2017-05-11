@@ -65,6 +65,10 @@
         MODASSIGN = '%='
         ADD = '+'
         SUB = '-'
+        SMALLER = '<'
+        BIGGER = '>'
+        SMALLEREQUAL = '<='
+        BIGGEREQUAL = '>='
         NOTOP = '!'
         BITNOTOP = '~'
         ANDOP = '&&'
@@ -150,7 +154,7 @@ propertyReferenceSuffix ::= DOT ID
 
 
 assignOperator ::= '=' | '+=' | '-=' | '*=' | '/=' | '%='
-relationOperator ::= '<' | '>' | '>=' | '<='
+relationOperator ::= SMALLER | BIGGER | BIGGEREQUAL | SMALLEREQUAL
 addorsubOperator ::= '+' | '-'
 unaryOperator ::= '+' | '-' | '~' | '!'
 multOrDivOperator::= '*' | '/'

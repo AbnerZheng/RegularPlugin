@@ -30,19 +30,19 @@ import org.jetbrains.annotations.Nullable;
  * Created by josesantos on 04/03/16.
  */
 public class RegularBraceMatcher implements PairedBraceMatcher {
-    @Override
-    public BracePair[] getPairs() {
-        return new BracePair[]{new BracePair(RegularTypes.LBRACE, RegularTypes.RBRACE, false)};
-    }
+  @Override
+  public BracePair[] getPairs() {
+    return new BracePair[]{new BracePair(RegularTypes.LBRACE, RegularTypes.RBRACE, false)};
+  }
 
-    @Override
-    public boolean isPairedBracesAllowedBeforeType(@NotNull IElementType iElementType, @Nullable IElementType iElementType1) {
-        return false;
-    }
+  @Override
+  public boolean isPairedBracesAllowedBeforeType(@NotNull IElementType iElementType, @Nullable IElementType iElementType1) {
+    return false;
+  }
 
-    @Override
-    public int getCodeConstructStart(PsiFile psiFile, int i) {
-        return 0;
-    }
+  @Override
+  public int getCodeConstructStart(PsiFile psiFile, int i) {
+    return 0;
+  }
 
 }

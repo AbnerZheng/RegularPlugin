@@ -114,7 +114,7 @@ public class RegularFormattingModelBuilder extends TemplateLanguageFormattingMod
          */
         @Override
         public Indent getIndent() {
-          return Indent.getNormalIndent();
+          return Indent.getNoneIndent();
 //            if(myNode.getText().trim().length() == 0){ // ºöÂÔ¿Õ°×·û
 //                return Indent.getNoneIndent();
 //            }

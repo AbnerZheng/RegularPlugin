@@ -1,0 +1,7 @@
+{#if user.age >= 80 }
+    you are too old
+{#elseif user.age <= 10}
+    you are too young
+{#else}
+    Welcome, Friend
+{/if}

@@ -95,6 +95,10 @@ ID=[_$a-zA-Z][_$a-zA-Z_0-9]*
   "*="               { return MULASSIGN; }
   "/="               { return DIVASSIGN; }
   "%="               { return MODASSIGN; }
+  "<"                { return SMALLER;   }
+  ">"                { return BIGGER;    }
+  "<="               { return SMALLEREQUAL;}
+  ">="               { return BIGGEREQUAL;}
   "+"                { return ADD; }
   "-"                { return SUB; }
   "!"                { return NOTOP;}
