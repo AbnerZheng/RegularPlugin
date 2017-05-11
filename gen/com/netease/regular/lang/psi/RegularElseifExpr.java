@@ -5,15 +5,12 @@ import java.util.List;
 import org.jetbrains.annotations.*;
 import com.intellij.psi.PsiElement;
 
-public interface RegularPropAssign extends PsiElement {
+public interface RegularElseifExpr extends PsiElement {
 
   @NotNull
-  RegularProp getProp();
+  RegularExpression getExpression();
 
   @Nullable
-  PsiElement getNumber();
-
-  @Nullable
-  PsiElement getString();
+  RegularStatement getStatement();
 
 }

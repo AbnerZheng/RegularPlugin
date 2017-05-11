@@ -85,12 +85,13 @@
 file ::= statement*
 statement ::= (CONTENT | ifExpr | listExpr | interpolationExpr | includeExpr | COMMENT)+
 
-ifExpr ::= STARTCOMMAND IF expression RBRACE statement? elseifExpr? elseExpr? ENDCOMMAND IF RBRACE
+ifExpr ::= ifExprStart statement? elseifExpr? elseExpr? ENDCOMMAND IF RBRACE
+ifExprStart ::= STARTCOMMAND IF expression RBRACE
 
 
-private elseExpr ::= STARTCOMMAND ELSE RBRACE statement?
+elseExpr ::= STARTCOMMAND ELSE RBRACE statement?
 
-private elseifExpr ::= STARTCOMMAND ELSEIF expression RBRACE statement?
+elseifExpr ::= STARTCOMMAND ELSEIF expression RBRACE statement?
 
 interpolationExpr ::= LBRACE expression  RBRACE
 
@@ -180,8 +181,8 @@ private literal ::=   NULL | TRUE
 
 array ::= LBRAKET assign (COMMA assign)* RBRAKET
 
-object ::= LBRACE propAssign (COMMA propAssign)* '}'
+object ::= LBRACE propAssign (COMMA propAssign)* RBRACE
 
-propAssign ::=  prop COLON assign
+propAssign ::=  prop COLON prop
 
 prop ::= NUMBER | ID | STRING

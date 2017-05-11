@@ -38,6 +38,9 @@ public class RegularParsingTest extends ParsingTestCase {
     public void testifExpr(){
         doTest(true);
     }
+    public void testhash(){
+        doTest(true);
+    }
 
     @Override
     protected String getTestDataPath() {

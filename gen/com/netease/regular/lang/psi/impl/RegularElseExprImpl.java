@@ -11,37 +11,19 @@ import static com.netease.regular.lang.psi.RegularTypes.*;
 import com.intellij.extapi.psi.ASTWrapperPsiElement;
 import com.netease.regular.lang.psi.*;
 
-public class RegularIfExprImpl extends ASTWrapperPsiElement implements RegularIfExpr {
+public class RegularElseExprImpl extends ASTWrapperPsiElement implements RegularElseExpr {
 
-  public RegularIfExprImpl(ASTNode node) {
+  public RegularElseExprImpl(ASTNode node) {
     super(node);
   }
 
   public void accept(@NotNull RegularVisitor visitor) {
-    visitor.visitIfExpr(this);
+    visitor.visitElseExpr(this);
   }
 
   public void accept(@NotNull PsiElementVisitor visitor) {
     if (visitor instanceof RegularVisitor) accept((RegularVisitor)visitor);
     else super.accept(visitor);
-  }
-
-  @Override
-  @Nullable
-  public RegularElseExpr getElseExpr() {
-    return findChildByClass(RegularElseExpr.class);
-  }
-
-  @Override
-  @Nullable
-  public RegularElseifExpr getElseifExpr() {
-    return findChildByClass(RegularElseifExpr.class);
-  }
-
-  @Override
-  @NotNull
-  public RegularIfExprStart getIfExprStart() {
-    return findNotNullChildByClass(RegularIfExprStart.class);
   }
 
   @Override

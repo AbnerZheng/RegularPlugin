@@ -28,80 +28,20 @@ public class RegularPropAssignImpl extends ASTWrapperPsiElement implements Regul
 
   @Override
   @NotNull
-  public List<RegularAddorsubOperator> getAddorsubOperatorList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularAddorsubOperator.class);
-  }
-
-  @Override
-  @NotNull
-  public List<RegularArgs> getArgsList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularArgs.class);
-  }
-
-  @Override
-  @NotNull
-  public List<RegularArray> getArrayList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularArray.class);
-  }
-
-  @Override
-  @NotNull
-  public List<RegularAssignOperator> getAssignOperatorList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularAssignOperator.class);
-  }
-
-  @Override
-  @NotNull
-  public List<RegularEquationOperator> getEquationOperatorList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularEquationOperator.class);
-  }
-
-  @Override
-  @NotNull
-  public List<RegularExpression> getExpressionList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularExpression.class);
-  }
-
-  @Override
-  @NotNull
-  public List<RegularLeftHandExpr> getLeftHandExprList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularLeftHandExpr.class);
-  }
-
-  @Override
-  @NotNull
-  public List<RegularMultOrDivOperator> getMultOrDivOperatorList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularMultOrDivOperator.class);
-  }
-
-  @Override
-  @NotNull
-  public List<RegularObject> getObjectList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularObject.class);
-  }
-
-  @Override
-  @NotNull
   public RegularProp getProp() {
     return findNotNullChildByClass(RegularProp.class);
   }
 
   @Override
-  @NotNull
-  public List<RegularPropertyReferenceSuffix> getPropertyReferenceSuffixList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularPropertyReferenceSuffix.class);
+  @Nullable
+  public PsiElement getNumber() {
+    return findChildByType(NUMBER);
   }
 
   @Override
-  @NotNull
-  public List<RegularRelationOperator> getRelationOperatorList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularRelationOperator.class);
-  }
-
-  @Override
-  @NotNull
-  public List<RegularUnaryOperator> getUnaryOperatorList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularUnaryOperator.class);
+  @Nullable
+  public PsiElement getString() {
+    return findChildByType(STRING);
   }
 
 }

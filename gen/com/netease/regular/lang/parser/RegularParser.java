@@ -44,6 +44,12 @@ public class RegularParser implements PsiParser, LightPsiParser {
     else if (t == CALL_EXPR_SUFFIX) {
       r = callExprSuffix(b, 0);
     }
+    else if (t == ELSE_EXPR) {
+      r = elseExpr(b, 0);
+    }
+    else if (t == ELSEIF_EXPR) {
+      r = elseifExpr(b, 0);
+    }
     else if (t == EQUATION_OPERATOR) {
       r = equationOperator(b, 0);
     }
@@ -55,6 +61,9 @@ public class RegularParser implements PsiParser, LightPsiParser {
     }
     else if (t == IF_EXPR) {
       r = ifExpr(b, 0);
+    }
+    else if (t == IF_EXPR_START) {
+      r = ifExprStart(b, 0);
     }
     else if (t == INCLUDE_EXPR) {
       r = includeExpr(b, 0);
@@ -398,14 +407,14 @@ public class RegularParser implements PsiParser, LightPsiParser {
 
   /* ********************************************************** */
   // STARTCOMMAND ELSE RBRACE statement?
-  static boolean elseExpr(PsiBuilder b, int l) {
+  public static boolean elseExpr(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "elseExpr")) return false;
     if (!nextTokenIs(b, STARTCOMMAND)) return false;
     boolean r;
     Marker m = enter_section_(b);
     r = consumeTokens(b, 0, STARTCOMMAND, ELSE, RBRACE);
     r = r && elseExpr_3(b, l + 1);
-    exit_section_(b, m, null, r);
+    exit_section_(b, m, ELSE_EXPR, r);
     return r;
   }
 
@@ -418,7 +427,7 @@ public class RegularParser implements PsiParser, LightPsiParser {
 
   /* ********************************************************** */
   // STARTCOMMAND ELSEIF expression RBRACE statement?
-  static boolean elseifExpr(PsiBuilder b, int l) {
+  public static boolean elseifExpr(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "elseifExpr")) return false;
     if (!nextTokenIs(b, STARTCOMMAND)) return false;
     boolean r;
@@ -427,7 +436,7 @@ public class RegularParser implements PsiParser, LightPsiParser {
     r = r && expression(b, l + 1);
     r = r && consumeToken(b, RBRACE);
     r = r && elseifExpr_4(b, l + 1);
-    exit_section_(b, m, null, r);
+    exit_section_(b, m, ELSEIF_EXPR, r);
     return r;
   }
 
@@ -572,42 +581,54 @@ public class RegularParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // STARTCOMMAND IF expression RBRACE statement? elseifExpr? elseExpr? ENDCOMMAND IF RBRACE
+  // ifExprStart statement? elseifExpr? elseExpr? ENDCOMMAND IF RBRACE
   public static boolean ifExpr(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "ifExpr")) return false;
     if (!nextTokenIs(b, STARTCOMMAND)) return false;
     boolean r;
     Marker m = enter_section_(b);
-    r = consumeTokens(b, 0, STARTCOMMAND, IF);
-    r = r && expression(b, l + 1);
-    r = r && consumeToken(b, RBRACE);
-    r = r && ifExpr_4(b, l + 1);
-    r = r && ifExpr_5(b, l + 1);
-    r = r && ifExpr_6(b, l + 1);
+    r = ifExprStart(b, l + 1);
+    r = r && ifExpr_1(b, l + 1);
+    r = r && ifExpr_2(b, l + 1);
+    r = r && ifExpr_3(b, l + 1);
     r = r && consumeTokens(b, 0, ENDCOMMAND, IF, RBRACE);
     exit_section_(b, m, IF_EXPR, r);
     return r;
   }
 
   // statement?
-  private static boolean ifExpr_4(PsiBuilder b, int l) {
-    if (!recursion_guard_(b, l, "ifExpr_4")) return false;
+  private static boolean ifExpr_1(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "ifExpr_1")) return false;
     statement(b, l + 1);
     return true;
   }
 
   // elseifExpr?
-  private static boolean ifExpr_5(PsiBuilder b, int l) {
-    if (!recursion_guard_(b, l, "ifExpr_5")) return false;
+  private static boolean ifExpr_2(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "ifExpr_2")) return false;
     elseifExpr(b, l + 1);
     return true;
   }
 
   // elseExpr?
-  private static boolean ifExpr_6(PsiBuilder b, int l) {
-    if (!recursion_guard_(b, l, "ifExpr_6")) return false;
+  private static boolean ifExpr_3(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "ifExpr_3")) return false;
     elseExpr(b, l + 1);
     return true;
+  }
+
+  /* ********************************************************** */
+  // STARTCOMMAND IF expression RBRACE
+  public static boolean ifExprStart(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "ifExprStart")) return false;
+    if (!nextTokenIs(b, STARTCOMMAND)) return false;
+    boolean r;
+    Marker m = enter_section_(b);
+    r = consumeTokens(b, 0, STARTCOMMAND, IF);
+    r = r && expression(b, l + 1);
+    r = r && consumeToken(b, RBRACE);
+    exit_section_(b, m, IF_EXPR_START, r);
+    return r;
   }
 
   /* ********************************************************** */
@@ -844,7 +865,7 @@ public class RegularParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // LBRACE propAssign (COMMA propAssign)* '}'
+  // LBRACE propAssign (COMMA propAssign)* RBRACE
   public static boolean object(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "object")) return false;
     if (!nextTokenIs(b, LBRACE)) return false;
@@ -949,14 +970,14 @@ public class RegularParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // prop COLON assign
+  // prop COLON literal
   public static boolean propAssign(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "propAssign")) return false;
     boolean r;
     Marker m = enter_section_(b, l, _NONE_, PROP_ASSIGN, "<prop assign>");
     r = prop(b, l + 1);
     r = r && consumeToken(b, COLON);
-    r = r && assign(b, l + 1);
+    r = r && literal(b, l + 1);
     exit_section_(b, l, m, r, false, null);
     return r;
   }

@@ -47,6 +47,10 @@ public class RegularJsLexerTest extends LexerTestCase {
         doFileTest("rgl");
     }
 
+    public void testHash(){
+        doFileTest("rgl");
+    }
+
     @Override
     protected String getDirPath() {
         return Paths.get(RegularTestUtil.getBaseTestDataPath(), "lexer").toString().substring(PathManager.getHomePath().length());

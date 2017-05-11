@@ -114,7 +114,7 @@ public class RegularFormattingModelBuilder extends TemplateLanguageFormattingMod
          */
         @Override
         public Indent getIndent() {
-          return Indent.getNoneIndent();
+            return Indent.getNoneIndent();
 //            if(myNode.getText().trim().length() == 0){ // 忽略空白符
 //                return Indent.getNoneIndent();
 //            }
@@ -126,14 +126,13 @@ public class RegularFormattingModelBuilder extends TemplateLanguageFormattingMod
 //            if(foreignBlockParent == null){
 //                return Indent.getNormalIndent();
 //            }
-//
+
 //            if (foreignBlockParent.getNode() instanceof XmlTag) {
 //                XmlTag xmlTag = (XmlTag) foreignBlockParent.getNode();
 //                if (!myHtmlPolicy.indentChildrenOf(xmlTag)) {
 //                     HTML 没有indent,所以加上我们自己的Indent
 //                    return Indent.getNormalIndent();
 //                }
-//            }
 //            }
 //            return Indent.getNoneIndent();
         }
