@@ -2,18 +2,18 @@
   <configuration default="false" name="RegularCodeInsightTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
     <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
       <pattern>
-        <option name="PATTERN" value="com.regular.ide.*" />
+        <option name="PATTERN" value="com.regular.ide.fold.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>
     <module name="RegularPlugin" />
-    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-    <option name="ALTERNATIVE_JRE_PATH" />
-    <option name="PACKAGE_NAME" value="com.regular.ide" />
-    <option name="MAIN_CLASS_NAME" value="com.regular.ide.RegularCodeInsightTest" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="ALTERNATIVE_JRE_PATH" value="IntelliJ IDEA Community Edition IC-171.4073.35" />
+    <option name="PACKAGE_NAME" value="com.regular.ide.fold" />
+    <option name="MAIN_CLASS_NAME" value="com.regular.ide.fold.RegularCodeInsightTest" />
     <option name="METHOD_NAME" value="" />
     <option name="TEST_OBJECT" value="class" />
-    <option name="VM_PARAMETERS" value="-ea -Xbootclasspath/p:../out/classes/production/boot -XX:+HeapDumpOnOutOfMemoryError -Xmx512m -XX:MaxPermSize=320m -Didea.system.path=../test-system -Didea.home.path=../ -Didea.config.path=../test-config -Didea.test.group=ALL_EXCLUDE_DEFINED " />
+    <option name="VM_PARAMETERS" value="-ea -Xbootclasspath/p:../out/classes/production/boot -XX:+HeapDumpOnOutOfMemoryError -Xmx512m -XX:MaxPermSize=320m -Didea.system.path=../test-system -Didea.home.path=./ -Didea.config.path=../test-config -Didea.test.group=ALL_EXCLUDE_DEFINED " />
     <option name="PARAMETERS" value="" />
     <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
     <option name="ENV_VARIABLES" />

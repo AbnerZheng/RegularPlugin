@@ -19,7 +19,8 @@ public class RegularColorSettingsPage implements ColorSettingsPage {
 
     public static final AttributesDescriptor[] DESCRIPTORS = new AttributesDescriptor[]{
             new AttributesDescriptor("Brace", RegularSyntaxHighlighter.BRACES),
-            new AttributesDescriptor("Rules", RegularSyntaxHighlighter.RULES)
+            new AttributesDescriptor("Rules", RegularSyntaxHighlighter.RULES),
+            new AttributesDescriptor("String", RegularSyntaxHighlighter.STRING)
     };
 
     @Nullable
@@ -41,7 +42,7 @@ public class RegularColorSettingsPage implements ColorSettingsPage {
                 "you are too old\n" +
                 "{#elseif user.age <= 10}\n" +
                 "you are too young\n" +
-                "This is your age {user.age}\n" +
+                "This is your age {user.age + \" years old\"}\n" +
                 "{#else}\n" +
                 "Welcome, Friend\n" +
                 "{/if}";

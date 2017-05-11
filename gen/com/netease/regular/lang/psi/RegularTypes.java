@@ -29,8 +29,8 @@ public interface RegularTypes {
   IElementType PROPERTY_REFERENCE_SUFFIX = new RegularElementType("PROPERTY_REFERENCE_SUFFIX");
   IElementType PROP_ASSIGN = new RegularElementType("PROP_ASSIGN");
   IElementType RELATION_OPERATOR = new RegularElementType("RELATION_OPERATOR");
+  IElementType STATEMENT = new RegularElementType("STATEMENT");
   IElementType UNARY_OPERATOR = new RegularElementType("UNARY_OPERATOR");
-  IElementType WRAPPER_BLOCK = new RegularElementType("WRAPPER_BLOCK");
 
   IElementType ADD = new RegularTokenType("+");
   IElementType ADDASSIGN = new RegularTokenType("+=");
@@ -142,11 +142,11 @@ public interface RegularTypes {
       else if (type == RELATION_OPERATOR) {
         return new RegularRelationOperatorImpl(node);
       }
+      else if (type == STATEMENT) {
+        return new RegularStatementImpl(node);
+      }
       else if (type == UNARY_OPERATOR) {
         return new RegularUnaryOperatorImpl(node);
-      }
-      else if (type == WRAPPER_BLOCK) {
-        return new RegularWrapperBlockImpl(node);
       }
       throw new AssertionError("Unknown element type: " + type);
     }

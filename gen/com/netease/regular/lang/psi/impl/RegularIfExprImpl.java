@@ -34,8 +34,8 @@ public class RegularIfExprImpl extends ASTWrapperPsiElement implements RegularIf
 
   @Override
   @NotNull
-  public List<RegularWrapperBlock> getWrapperBlockList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularWrapperBlock.class);
+  public List<RegularStatement> getStatementList() {
+    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularStatement.class);
   }
 
 }

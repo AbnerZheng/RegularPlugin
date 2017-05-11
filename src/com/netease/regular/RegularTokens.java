@@ -20,6 +20,7 @@ package com.netease.regular;
 
 import com.intellij.psi.TokenType;
 import com.intellij.psi.tree.TokenSet;
+import com.netease.regular.lang.psi.RegularTypes;
 
 import static com.intellij.psi.CustomHighlighterTokenType.STRING;
 import static com.netease.regular.lang.psi.RegularTypes.*;
@@ -27,7 +28,7 @@ import static javax.xml.stream.XMLStreamConstants.COMMENT;
 
 
 public interface RegularTokens {
-    TokenSet tsSTRINGS = TokenSet.create(STRING);
+    TokenSet tsSTRINGS = TokenSet.create(RegularTypes.STRING);
     //    TokenSet tsCOMMENTS = TokenSet.create(COMMENT);
     TokenSet tsWHITESPACE = TokenSet.create(TokenType.WHITE_SPACE);
     TokenSet tsRULES = TokenSet.create(

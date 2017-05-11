@@ -26,7 +26,7 @@ import java.io.IOException;
 
 
 /**
- * Java representation of the validations in the spec/tokenizer.js revision which corresponds
+ * Java representation of the validations in the spec/tokenizer.RegularFormatTest revision which corresponds
  * to the revision of handlesbars.l that our lexer is based on
  * (https://github.com/wycats/handlebars.js/blob/408192ba9f262bb82be88091ab3ec3c16dc02c6d/spec/tokenizer.js)
  * <p/>
@@ -48,7 +48,7 @@ public class RegularTokenizerSpecTest extends RegularLexerTest {
     public void testSimpleMustache() {
         final String s;
         try {
-            s = readFileContent("testData/lexTest.html");
+            s = readFileContent("testData/lexTest.hbs");
             TokenizerResult result = tokenize(s);
             result.printTokens();
         } catch (IOException e) {

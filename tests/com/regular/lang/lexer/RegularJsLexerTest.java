@@ -6,6 +6,8 @@ import com.intellij.testFramework.LexerTestCase;
 import com.netease.regular.lang.lexer.RegularLexer;
 import com.regular.RegularTestUtil;
 
+import java.nio.file.Paths;
+
 /**
  * Created by abnerzheng on 2017/1/9.
  */
@@ -47,6 +49,6 @@ public class RegularJsLexerTest extends LexerTestCase {
 
     @Override
     protected String getDirPath() {
-        return RegularTestUtil.getBaseTestDataPath(RegularJsLexerTest.class).substring(PathManager.getHomePath().length());
+        return Paths.get(RegularTestUtil.getBaseTestDataPath(), "lexer").toString().substring(PathManager.getHomePath().length());
     }
 }

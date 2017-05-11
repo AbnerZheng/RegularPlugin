@@ -16,6 +16,8 @@
   </change-notes>
   <idea-version since-build="143.379"/>
   <depends>com.intellij.modules.lang</depends>
+  <!--<depends>JavaScript</depends>-->
+  <!--<depends>com.intellij.modules.xml</depends>-->
   <module-components>
   </module-components>
 

@@ -14,10 +14,14 @@ import com.intellij.psi.formatter.xml.SyntheticBlock;
 import com.intellij.psi.templateLanguages.SimpleTemplateLanguageFormattingModelBuilder;
 import com.intellij.psi.templateLanguages.TemplateDataLanguageMappings;
 import com.intellij.psi.tree.IElementType;
+import com.intellij.psi.util.PsiTreeUtil;
 import com.intellij.psi.xml.XmlTag;
 import com.netease.regular.RegularTokens;
+import com.netease.regular.ide.templates.RegularContext;
+import com.netease.regular.lang.psi.RegularStatement;
 import com.netease.regular.lang.psi.RegularTokenType;
 import com.netease.regular.lang.psi.RegularTypes;
+import com.netease.regular.lang.psi.impl.RegularStatementImpl;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import sun.text.resources.cldr.ln.FormatData_ln;
@@ -29,6 +33,7 @@ import static com.netease.regular.lang.file.RegularFileViewProvider.Regular_FRAG
 
 
 /**
+ * TemplateLanguageFormattingModelBuilder 提供模板代理的功能
  * Created by abnerzheng on 2017/1/11.
  */
 public class RegularFormattingModelBuilder extends TemplateLanguageFormattingModelBuilder{
@@ -45,7 +50,8 @@ public class RegularFormattingModelBuilder extends TemplateLanguageFormattingMod
     }
 
     /**
-     * 正如Handlebar 插件所说
+     * 正如Handlebar 插件所说, 我们需要override{@link com.intellij.formatting.templateLanguages.TemplateLanguageFormattingModelBuilder#createModel}
+     * 因为当我们设置由模板语言代理， 这些语言（xml/html）把我们告诉他需要忽略的
      * @param element
      * @param settings
      * @return
@@ -60,12 +66,11 @@ public class RegularFormattingModelBuilder extends TemplateLanguageFormattingMod
 
         ASTNode node = element.getNode();
 
-//        if(node.getElementType() != Regular_FRAGMENT){// 外部元素
-//            return new SimpleTemplateLanguageFormattingModelBuilder().createModel(element, settings); // 按照原有的模式进行format
-//        } else{
-
+        if(node.getElementType() == Regular_FRAGMENT){//当该元素是Regular的外部元素
+            return new SimpleTemplateLanguageFormattingModelBuilder().createModel(element, settings); // 按照原有的模式进行format
+        } else{
          rootBlock = getRootBlock(containingFile, containingFile.getViewProvider(), settings);
-//        }
+        }
 
         return new DocumentBasedFormattingModel(rootBlock, element.getProject(), settings, containingFile.getFileType(), containingFile);
     }
@@ -96,25 +101,41 @@ public class RegularFormattingModelBuilder extends TemplateLanguageFormattingMod
             return RegularTypes.CONTENT; // 所有的content由Template引擎进行format
         }
 
+        public boolean isRootStatementsElement(PsiElement element){
+            PsiElement firstParent = PsiTreeUtil.findFirstParent(element, true, element1 -> element1 != null
+              && element1 instanceof RegularStatementImpl);
+            return firstParent == null;
+        }
+
+
+        /**
+         * 我们
+         * @return
+         */
         @Override
         public Indent getIndent() {
-            if(myNode.getText().trim().length() == 0){ // 忽略空白符
-                return Indent.getNoneIndent();
-            }
-            // Todo 对是否为attribute的判断
-            DataLanguageBlockWrapper foreignBlockParent = getForeignBlockParent(false);
-            if(foreignBlockParent == null){
-                return Indent.getNormalIndent();
-            }
-
-            if(foreignBlockParent.getNode() instanceof XmlTag){
-                XmlTag xmlTag = (XmlTag) foreignBlockParent.getNode();
-                if(!myHtmlPolicy.indentChildrenOf(xmlTag)){
-                    // HTML 没有indent,所以加上我们自己的Indent
-                    return Indent.getNormalIndent();
-                }
-            }
-            return Indent.getNoneIndent();
+          return Indent.getNormalIndent();
+//            if(myNode.getText().trim().length() == 0){ // 忽略空白符
+//                return Indent.getNoneIndent();
+//            }
+//             Todo 对是否为attribute的判断
+//            if(isRootStatementsElement(myNode.getPsi())) {
+//              return Indent.getNoneIndent();
+//            }
+//            DataLanguageBlockWrapper foreignBlockParent = getForeignBlockParent(false);
+//            if(foreignBlockParent == null){
+//                return Indent.getNormalIndent();
+//            }
+//
+//            if (foreignBlockParent.getNode() instanceof XmlTag) {
+//                XmlTag xmlTag = (XmlTag) foreignBlockParent.getNode();
+//                if (!myHtmlPolicy.indentChildrenOf(xmlTag)) {
+//                     HTML 没有indent,所以加上我们自己的Indent
+//                    return Indent.getNormalIndent();
+//                }
+//            }
+//            }
+//            return Indent.getNoneIndent();
         }
 
         private  DataLanguageBlockWrapper getForeignBlockParent(boolean immediate){

@@ -33,6 +33,10 @@ import com.netease.regular.RegularLanguage;
 import com.netease.regular.lang.psi.RegularTypes;
 
 
+/**
+ * 把IDEA自带的HTML高亮器作为外部高亮器，处理RegularTypes.CONTENT, 其他都由Regular的Highlighter处理
+ * @author AbnerZheng
+ */
 public class RegularLayeredSyntaxHighlighter extends LayeredLexerEditorHighlighter {
     public RegularLayeredSyntaxHighlighter(Project project, EditorColorsScheme scheme, FileType ptype, VirtualFile virtualFile) {
         super(new RegularSyntaxHighlighter(), scheme);

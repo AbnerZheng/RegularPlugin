@@ -91,11 +91,11 @@ public class RegularVisitor extends PsiElementVisitor {
     visitPsiElement(o);
   }
 
-  public void visitUnaryOperator(@NotNull RegularUnaryOperator o) {
+  public void visitStatement(@NotNull RegularStatement o) {
     visitPsiElement(o);
   }
 
-  public void visitWrapperBlock(@NotNull RegularWrapperBlock o) {
+  public void visitUnaryOperator(@NotNull RegularUnaryOperator o) {
     visitPsiElement(o);
   }
 

@@ -11,7 +11,7 @@ public interface RegularListExpr extends PsiElement {
   List<RegularExpression> getExpressionList();
 
   @Nullable
-  RegularWrapperBlock getWrapperBlock();
+  RegularStatement getStatement();
 
   @Nullable
   PsiElement getId();

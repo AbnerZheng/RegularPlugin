@@ -1,4 +1,4 @@
-package com.regular.ide;
+package com.regular.ide.fold;
 
 import com.intellij.openapi.application.PathManager;
 import com.intellij.testFramework.fixtures.LightCodeInsightFixtureTestCase;
@@ -16,10 +16,10 @@ public class RegularCodeInsightTest extends LightCodeInsightFixtureTestCase {
 
     @Override
     protected String getTestDataPath() {
-        return RegularTestUtil.getBaseTestDataPath(RegularCodeInsightTest.class);
+        return RegularTestUtil.getBaseTestDataPath();
     }
 
     public void testFolding(){
-        myFixture.testFolding(getTestDataPath() + "/folding.rgl");
+        myFixture.testFolding(getTestDataPath() + "/fold/folding.rgl");
     }
 }

@@ -46,7 +46,7 @@ public class RegularFileViewProvider extends MultiplePsiFilesPerDocumentFileView
     private final Language myTemplateDataLanguage;
     public static final IElementType Regular_FRAGMENT = new IElementType("RegularFragmentElementType", RegularLanguage.INSTANCE);
     public static final IElementType TEMPLATE_DATA =
-            new TemplateDataElementType("RegularTextElementType", RegularLanguage.INSTANCE, RegularTypes.CONTENT, Regular_FRAGMENT);
+            new RegularTemplateDataElementType ("RegularTextElementType", RegularLanguage.INSTANCE, RegularTypes.CONTENT, Regular_FRAGMENT);
 
     public RegularFileViewProvider(PsiManager manager, VirtualFile file, boolean physical) {
         super(manager, file, physical);

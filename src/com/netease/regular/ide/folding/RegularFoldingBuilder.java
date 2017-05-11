@@ -27,14 +27,14 @@ public class RegularFoldingBuilder extends CustomFoldingBuilder implements DumbA
 
         final RegularFile regularFile = (RegularFile) psiElement;
 
-        final Collection<PsiElement> collection = PsiTreeUtil.collectElementsOfType(psiElement, new Class[]{RegularWrapperBlock.class});
+        final Collection<PsiElement> collection = PsiTreeUtil.collectElementsOfType(psiElement, new Class[]{RegularStatement.class});
 //        foldCommens(list, collection, fileHeaderRange);
         foldBlock(list, collection, document);
     }
 
     private void foldBlock(List<FoldingDescriptor> list, Collection<PsiElement> collection, Document document) {
         for (PsiElement psiElement : collection) {
-            final RegularWrapperBlock blockElement = (RegularWrapperBlock) psiElement; // blockElement 一定是非空，但是还是判断一下
+            final RegularStatement blockElement = (RegularStatement) psiElement; // blockElement 一定是非空，但是还是判断一下
             if (blockElement.getFirstChild() == null) {
                 continue;
             }

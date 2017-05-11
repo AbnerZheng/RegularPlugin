@@ -79,21 +79,20 @@
     ]
 }
 file ::= statement*
-private statement ::= CONTENT | ifExpr | listExpr | interpolationExpr | includeExpr | COMMENT
+statement ::= (CONTENT | ifExpr | listExpr | interpolationExpr | includeExpr | COMMENT)+
 
-ifExpr ::= STARTCOMMAND IF expression RBRACE wrapperBlock? elseifExpr? elseExpr? ENDCOMMAND IF RBRACE
+ifExpr ::= STARTCOMMAND IF expression RBRACE statement? elseifExpr? elseExpr? ENDCOMMAND IF RBRACE
 
-wrapperBlock ::= statement+
 
-private elseExpr ::= STARTCOMMAND ELSE RBRACE wrapperBlock?
+private elseExpr ::= STARTCOMMAND ELSE RBRACE statement?
 
-private elseifExpr ::= STARTCOMMAND ELSEIF expression RBRACE wrapperBlock?
+private elseifExpr ::= STARTCOMMAND ELSEIF expression RBRACE statement?
 
 interpolationExpr ::= LBRACE expression  RBRACE
 
 expression ::= bindOnceExpr | expr
 
-listExpr ::=  STARTCOMMAND LIST expression (AS ID (BY expression)?)? RBRACE wrapperBlock? ENDCOMMAND LIST RBRACE
+listExpr ::=  STARTCOMMAND LIST expression (AS ID (BY expression)?)? RBRACE statement? ENDCOMMAND LIST RBRACE
 bindOnceExpr ::= AT LPARAM expr RPARAM
 includeExpr ::= STARTCOMMAND INCLUDE ID RBRACE
 
@@ -145,7 +144,7 @@ private multive ::= unary (multOrDivOperator unary)*
 
 private unary ::= unaryOperator unary | member
 private member ::= primary memberSuffix*
-private memberSuffix ::= indexSuffix | propertyReferenceSuffix | LPARAM args RPARAM
+private memberSuffix ::= indexSuffix | propertyReferenceSuffix | LPARAM args? RPARAM
 private indexSuffix ::= LBRAKET expression RBRAKET
 propertyReferenceSuffix ::= DOT ID
 

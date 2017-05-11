@@ -31,7 +31,7 @@ import org.jetbrains.annotations.NotNull;
 public class RegularSyntaxHighlighter extends SyntaxHighlighterBase {
 
     public static final TextAttributesKey BRACES = TextAttributesKey.createTextAttributesKey("OPEN_CLOSE_TEMPLATE",
-            DefaultLanguageHighlighterColors.BRACES);
+            DefaultLanguageHighlighterColors.FUNCTION_DECLARATION);
 
     public static final TextAttributesKey[] BRACES_KEYS = new TextAttributesKey[]{BRACES};
 
@@ -80,7 +80,6 @@ public class RegularSyntaxHighlighter extends SyntaxHighlighterBase {
         if (type == RegularTypes.ID) {
             return IDENT_KEYS;
         }
-
 //        if (type == RegularTypes.COMM) {
 //            return COMMENTS_KEYS;
 //        }

@@ -23,6 +23,9 @@ import com.intellij.testFramework.ParsingTestCase;
 import com.netease.regular.RegularParserDefinition;
 import com.regular.RegularTestUtil;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class RegularParsingTest extends ParsingTestCase {
     public RegularParsingTest() {
         super("", "rgl", new RegularParserDefinition());
@@ -34,7 +37,7 @@ public class RegularParsingTest extends ParsingTestCase {
 
     @Override
     protected String getTestDataPath() {
-        return RegularTestUtil.getBaseTestDataPath(RegularParsingTest.class);
+        return Paths.get(RegularTestUtil.getBaseTestDataPath(), "parsing").toString();
 //        return "RegularPlugin/testData";
     }
 

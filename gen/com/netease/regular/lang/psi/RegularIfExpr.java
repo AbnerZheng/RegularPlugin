@@ -11,6 +11,6 @@ public interface RegularIfExpr extends PsiElement {
   List<RegularExpression> getExpressionList();
 
   @NotNull
-  List<RegularWrapperBlock> getWrapperBlockList();
+  List<RegularStatement> getStatementList();
 
 }

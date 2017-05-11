@@ -34,8 +34,8 @@ public class RegularListExprImpl extends ASTWrapperPsiElement implements Regular
 
   @Override
   @Nullable
-  public RegularWrapperBlock getWrapperBlock() {
-    return findChildByClass(RegularWrapperBlock.class);
+  public RegularStatement getStatement() {
+    return findChildByClass(RegularStatement.class);
   }
 
   @Override
