@@ -1,2 +1,1 @@
-<span class="j-tag delete-tag u-icon-delete-normal" r-class={{'f-dn-important':1}} data-action={tp.actionData}>
-</span>
+{x=xlist}

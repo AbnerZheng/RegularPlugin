@@ -87,14 +87,6 @@ public class RegularVisitor extends PsiElementVisitor {
     visitPsiElement(o);
   }
 
-  public void visitProp(@NotNull RegularProp o) {
-    visitPsiElement(o);
-  }
-
-  public void visitPropAssign(@NotNull RegularPropAssign o) {
-    visitPsiElement(o);
-  }
-
   public void visitPropertyReferenceSuffix(@NotNull RegularPropertyReferenceSuffix o) {
     visitPsiElement(o);
   }

@@ -28,9 +28,7 @@ public interface RegularTypes {
   IElementType LIST_EXPR = new RegularElementType("LIST_EXPR");
   IElementType MULT_OR_DIV_OPERATOR = new RegularElementType("MULT_OR_DIV_OPERATOR");
   IElementType OBJECT = new RegularElementType("OBJECT");
-  IElementType PROP = new RegularElementType("PROP");
   IElementType PROPERTY_REFERENCE_SUFFIX = new RegularElementType("PROPERTY_REFERENCE_SUFFIX");
-  IElementType PROP_ASSIGN = new RegularElementType("PROP_ASSIGN");
   IElementType RELATION_OPERATOR = new RegularElementType("RELATION_OPERATOR");
   IElementType STATEMENT = new RegularElementType("STATEMENT");
   IElementType UNARY_OPERATOR = new RegularElementType("UNARY_OPERATOR");
@@ -146,14 +144,8 @@ public interface RegularTypes {
       else if (type == OBJECT) {
         return new RegularObjectImpl(node);
       }
-      else if (type == PROP) {
-        return new RegularPropImpl(node);
-      }
       else if (type == PROPERTY_REFERENCE_SUFFIX) {
         return new RegularPropertyReferenceSuffixImpl(node);
-      }
-      else if (type == PROP_ASSIGN) {
-        return new RegularPropAssignImpl(node);
       }
       else if (type == RELATION_OPERATOR) {
         return new RegularRelationOperatorImpl(node);

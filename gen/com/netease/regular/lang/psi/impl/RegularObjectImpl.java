@@ -26,10 +26,4 @@ public class RegularObjectImpl extends ASTWrapperPsiElement implements RegularOb
     else super.accept(visitor);
   }
 
-  @Override
-  @NotNull
-  public List<RegularPropAssign> getPropAssignList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, RegularPropAssign.class);
-  }
-
 }

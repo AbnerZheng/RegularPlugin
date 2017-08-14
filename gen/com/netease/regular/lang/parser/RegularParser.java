@@ -83,12 +83,6 @@ public class RegularParser implements PsiParser, LightPsiParser {
     else if (t == OBJECT) {
       r = object(b, 0);
     }
-    else if (t == PROP) {
-      r = prop(b, 0);
-    }
-    else if (t == PROP_ASSIGN) {
-      r = propAssign(b, 0);
-    }
     else if (t == PROPERTY_REFERENCE_SUFFIX) {
       r = propertyReferenceSuffix(b, 0);
     }
@@ -958,27 +952,27 @@ public class RegularParser implements PsiParser, LightPsiParser {
 
   /* ********************************************************** */
   // NUMBER | ID | STRING
-  public static boolean prop(PsiBuilder b, int l) {
+  static boolean prop(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "prop")) return false;
     boolean r;
-    Marker m = enter_section_(b, l, _NONE_, PROP, "<prop>");
+    Marker m = enter_section_(b);
     r = consumeToken(b, NUMBER);
     if (!r) r = consumeToken(b, ID);
     if (!r) r = consumeToken(b, STRING);
-    exit_section_(b, l, m, r, false, null);
+    exit_section_(b, m, null, r);
     return r;
   }
 
   /* ********************************************************** */
-  // prop COLON literal
-  public static boolean propAssign(PsiBuilder b, int l) {
+  // prop COLON prop
+  static boolean propAssign(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "propAssign")) return false;
     boolean r;
-    Marker m = enter_section_(b, l, _NONE_, PROP_ASSIGN, "<prop assign>");
+    Marker m = enter_section_(b);
     r = prop(b, l + 1);
     r = r && consumeToken(b, COLON);
-    r = r && literal(b, l + 1);
-    exit_section_(b, l, m, r, false, null);
+    r = r && prop(b, l + 1);
+    exit_section_(b, m, null, r);
     return r;
   }
 

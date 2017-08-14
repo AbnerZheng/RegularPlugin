@@ -7,7 +7,4 @@ import com.intellij.psi.PsiElement;
 
 public interface RegularObject extends PsiElement {
 
-  @NotNull
-  List<RegularPropAssign> getPropAssignList();
-
 }

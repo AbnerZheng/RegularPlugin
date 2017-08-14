@@ -183,6 +183,6 @@ array ::= LBRAKET assign (COMMA assign)* RBRAKET
 
 object ::= LBRACE propAssign (COMMA propAssign)* RBRACE
 
-propAssign ::=  prop COLON prop
+private propAssign ::=  prop COLON prop
 
-prop ::= NUMBER | ID | STRING
+private prop ::= NUMBER | ID | STRING

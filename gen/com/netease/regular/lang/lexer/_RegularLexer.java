@@ -324,6 +324,7 @@ public class _RegularLexer implements FlexLexer {
 
   /* user code: */
   StringBuffer string = new StringBuffer();
+  int lBraceCount = 0;
 
   public _RegularLexer() {
     this((java.io.Reader)null);
@@ -595,7 +596,7 @@ public class _RegularLexer implements FlexLexer {
             }
           case 59: break;
           case 6: 
-            { return LBRACE;
+            { lBraceCount +=1; return LBRACE;
             }
           case 60: break;
           case 7: 
@@ -623,7 +624,11 @@ public class _RegularLexer implements FlexLexer {
             }
           case 66: break;
           case 13: 
-            { yybegin(YYINITIAL); return RBRACE;
+            { lBraceCount -=1;
+                       if(lBraceCount == 0){
+                          yybegin(YYINITIAL);
+                       }
+                       return RBRACE;
             }
           case 67: break;
           case 14: 
@@ -683,11 +688,11 @@ public class _RegularLexer implements FlexLexer {
             }
           case 81: break;
           case 28: 
-            { return STARTCOMMAND;
+            { lBraceCount +=1; return STARTCOMMAND;
             }
           case 82: break;
           case 29: 
-            { return ENDCOMMAND;
+            { lBraceCount +=1; return ENDCOMMAND;
             }
           case 83: break;
           case 30: 

@@ -11,6 +11,7 @@ import static com.netease.regular.lang.psi.RegularTypes.*;
 
 %{
   StringBuffer string = new StringBuffer();
+  int lBraceCount = 0;
 
   public _RegularLexer() {
     this((java.io.Reader)null);
@@ -64,13 +65,18 @@ ID=[_$a-zA-Z][_$a-zA-Z_0-9]*
 }
 <YYCONTENT> {
   {WHITE_SPACE}      { return WHITE_SPACE; }
-  "{"                { return LBRACE; }
-  "}"                { yybegin(YYINITIAL); return RBRACE; }
+  "{"                { lBraceCount +=1; return LBRACE; }
+  "}"                { lBraceCount -=1;
+                       if(lBraceCount == 0){
+                          yybegin(YYINITIAL);
+                       }
+                       return RBRACE;
+                     }
   "["                { return LBRAKET; }
   "]"                { return RBRAKET; }
   "."                { return DOT; }
-  "{#"               { return STARTCOMMAND; }
-  "{/"               { return ENDCOMMAND; }
+  "{#"               { lBraceCount +=1; return STARTCOMMAND; }
+  "{/"               { lBraceCount +=1; return ENDCOMMAND; }
   "if"               { return IF; }
   "else"             { return ELSE; }
   "elseif"           { return ELSEIF; }
